@@ -90,6 +90,11 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
+          href: 'https://www.linkedin.com/in/antonyjulien',
+          label: 'LinkedIn',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/SeriousJul/seriousjul.github.io',
           label: 'GitHub',
           position: 'right',
@@ -131,6 +136,10 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/antonyjulien',
             },
             {
               label: 'GitHub',
