@@ -79,7 +79,7 @@ const config: Config = {
       title: 'SeriousJul',
       logo: {
         alt: 'SeriousJul Logo',
-        src: 'img/logo.svg',
+        src: 'img/seriousjul.png',
       },
       items: [
         {
