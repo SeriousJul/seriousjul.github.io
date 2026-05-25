@@ -1,14 +1,42 @@
-# Website
+# SeriousJul's Personal Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This is the source code for my personal website hosted at https://seriousjul.github.io.
 
-## Installation
+## Technologies Used
 
-```bash
-npm
+- [Docusaurus 3.10.1](https://docusaurus.io/) - Static site generator
+- React 19
+- TypeScript
+- GitHub Pages for hosting
+
+## Project Structure
+
+```
+.
+├── blog/                 # Blog posts
+├── docs/                 # Documentation
+├── src/                  # Source code
+│   ├── components/       # Reusable components
+│   ├── css/              # Custom CSS
+│   └── pages/            # Custom pages
+├── static/               # Static assets
+└── .github/workflows/    # CI/CD workflows
 ```
 
-## Local Development
+## Development
+
+### Prerequisites
+
+- Node.js >= 20.0
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Local Development
 
 ```bash
 npm start
@@ -16,26 +44,26 @@ npm start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## Build
+### Build
 
 ```bash
-npm build
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Deployment
-
-Using SSH:
+### Deployment
 
 ```bash
-USE_SSH=true npm deploy
+npm run deploy
 ```
 
-Not using SSH:
+This command builds the website and deploys it to GitHub Pages.
 
-```bash
-GIT_USER=<Your GitHub username> npm deploy
-```
+## CI/CD Pipeline
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The project uses GitHub Actions for continuous integration and deployment:
+
+- **Workflow**: `.github/workflows/ci-cd.yml`
+- **Build & Test**: Runs on every push and pull request to main branch
+- **Deploy**: Automatically deploys to GitHub Pages when changes are pushed to main branch
