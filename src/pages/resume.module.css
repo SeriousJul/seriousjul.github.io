@@ -1,0 +1,445 @@
+.viewer {
+  min-height: 100vh;
+  background: #e8e8e8;
+  padding: 2rem 1rem;
+}
+
+[data-theme='dark'] .viewer {
+  background: #0a0a0a;
+}
+
+.pages {
+  max-width: 210mm;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  --resume-page-bg: #fff;
+  --resume-text: #1a1a1a;
+  min-height: 297mm;
+}
+
+[data-theme='dark'] .pages {
+  --resume-page-bg: #1e1e1e;
+  --resume-text: #d4d4d4;
+  min-height: 297mm;
+}
+
+.page,
+.expPage {
+  background: var(--resume-page-bg, #fff);
+  color: var(--resume-text, #1a1a1a);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 20mm 18mm;
+  min-height: 297mm;
+  max-height: 297mm;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 850px) {
+  .pages {
+    max-width: 100%;
+  }
+
+  .page,
+  .expPage {
+    min-height: auto;
+    max-height: none;
+    overflow-y: visible;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  color: var(--resume-text);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  color: var(--resume-text);
+  opacity: 0.8;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  opacity: 0.7;
+}
+
+.contactRow a {
+  color: var(--ifm-color-primary);
+}
+
+/* Section titles */
+.sectionTitle {
+  margin: 1.2rem 0 0.6rem;
+  border-bottom: 1px solid var(--ifm-color-primary);
+  padding-bottom: 0.3rem;
+}
+
+.sectionTitle h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: var(--resume-text);
+}
+
+/* Skills */
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.skillBadge {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-font-color-base);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .skillBadge {
+  background: rgba(37, 194, 160, 0.25);
+}
+
+.summaryList {
+  font-size: 0.9rem;
+  padding-left: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+.summaryList li {
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+/* Languages */
+.languagesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.languageItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageItem strong {
+  font-weight: 600;
+}
+
+/* Experience */
+.expPage {
+  /* inherits page styles */
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.expCompany {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.15rem;
+  color: var(--resume-text);
+}
+
+.expRole {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0 0 0;
+  color: var(--resume-text);
+  opacity: 0.8;
+}
+
+.expMeta {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.expDesc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0.3rem 0;
+  color: var(--resume-text);
+}
+
+.expBullets {
+  font-size: 0.88rem;
+  padding-left: 1.2rem;
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.expBullets li {
+  margin-bottom: 0.2rem;
+}
+
+.expSep {
+  margin: 0 0.3rem;
+  opacity: 0.4;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.5rem 0;
+}
+
+.keyword {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+[data-theme='dark'] .keyword {
+  background: rgba(37, 194, 160, 0.3);
+  color: var(--resume-text);
+}
+
+/* Education */
+.eduItem {
+  margin-bottom: 0.6rem;
+}
+
+.eduSchool {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.4rem 0 0;
+  color: var(--resume-text);
+}
+
+.eduDegree {
+  font-size: 0.88rem;
+  font-style: italic;
+  margin: 0.1rem 0 0;
+  color: var(--resume-text);
+  opacity: 0.8;
+}
+
+.eduPeriod {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Certifications */
+.certItem {
+  margin-bottom: 0.5rem;
+}
+
+.certName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.4rem 0 0;
+  color: var(--resume-text);
+}
+
+.certIssuer {
+  font-size: 0.85rem;
+  display: block;
+  font-style: italic;
+}
+
+.certDate {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Scores */
+.scoreItem {
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.scoreName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.4rem 0 0;
+  color: var(--resume-text);
+}
+
+.scoreDate {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Page break (for separating sections within the flow) */
+.pageBreak {
+  border-bottom: 2px solid var(--ifm-color-primary);
+  margin: 1.5rem 0;
+}
+
+/* Print styles */
+@media print {
+  /* Hide the viewer container and any non-print elements */
+  .viewer {
+    background: #fff;
+    padding: 0;
+    min-height: auto;
+  }
+
+  /* Make pages fit exactly on A4 paper */
+  .pages {
+    margin: 0 auto;
+    box-shadow: none;
+    background: #fff;
+    gap: 0;
+  }
+
+  /* Ensure pages don't break in the middle of content */
+  .page,
+  .expPage {
+    background: #fff;
+    overflow: hidden;
+    break-inside: avoid;
+    min-height: auto;
+    max-height: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0mm 10mm; /* Reduced margins */
+  }
+
+    /* Remove page breaks for print */
+  .pageBreak {
+    display: none;
+  }
+
+  /* Hide any interactive elements or UI controls */
+  .printControls {
+    display: none !important;
+  }
+
+  /* Ensure no scrollbars in print */
+  .page,
+  .expPage {
+    overflow: hidden;
+  }
+
+  /* Ensure proper spacing for print */
+  .expHeader {
+    margin-bottom: 0.5rem;
+  }
+
+  .expCompany {
+    margin-top: 0;
+  }
+
+  .expRole {
+    margin-bottom: 0.3rem;
+  }
+
+  /* Ensure all text is black for print */
+  * {
+    color: #000 !important;
+    background: transparent !important;
+  }
+
+  /* Ensure links are printed as text */
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* Ensure no background colors or images */
+  .sectionTitle h2 {
+    color: #000;
+  }
+
+  .expHeader {
+    color: #000;
+  }
+
+  .expCompany {
+    color: #000;
+  }
+
+  .expRole {
+    color: #000;
+  }
+
+  .expDesc {
+    color: #000;
+  }
+
+  .expBullets li {
+    color: #000;
+  }
+
+  .keywords {
+    color: #000;
+  }
+
+  .keyword {
+    color: #fff;
+  }
+
+  /* Ensure no borders or shadows */
+  .page,
+  .expPage {
+    box-shadow: none;
+    border: none;
+  }
+
+  /* Ensure consistent spacing */
+  .skillsGrid,
+  .languagesGrid,
+  .expBullets,
+  .summaryList {
+    margin: 0.3rem 0;
+  }
+
+  .sectionTitle {
+    border-bottom: 1px solid #000;
+  }
+
+  /* Ensure no margins for print */
+  .header {
+    margin-bottom: 0.8rem;
+  }
+
+  /* Ensure minimal page margins to reduce blank pages */
+  @page {
+    margin: 2mm; /* Reduced margins */
+    size: A4;
+  }
+}

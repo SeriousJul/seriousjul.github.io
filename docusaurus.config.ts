@@ -89,6 +89,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/resume', label: 'Resume', position: 'left'},
         {
           href: 'https://www.linkedin.com/in/antonyjulien',
           label: 'LinkedIn',
@@ -136,6 +137,10 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
+            },
+            {
+              label: 'Resume',
+              to: '/resume',
             },
             {
               label: 'LinkedIn',
