@@ -50,6 +50,12 @@ This command starts a local development server and opens up a browser window. Mo
 npm run build
 ```
 
+## Dependency Management
+
+This project uses [Dependabot](https://docs.github.com/en/code-security/dependabot) to automatically keep dependencies up to date. Dependabot will create pull requests for dependency updates on a weekly basis, helping to maintain security and stability.
+
+For more information about Dependabot configuration, see the [.github/dependabot.yml](.github/dependabot.yml) file.
+
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ### Deployment

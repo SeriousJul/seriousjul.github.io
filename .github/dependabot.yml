@@ -1,0 +1,47 @@
+version: 2
+updates:
+  # Keep npm dependencies up to date
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "12:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 10
+    target-branch: "main"
+    labels:
+      - "dependencies"
+      - "npm"
+    assignees:
+      - "SeriousJul"
+    reviewers:
+      - "SeriousJul"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    ignore:
+      # Ignore major version updates for now
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+      
+  # Keep GitHub Actions workflows up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "12:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 5
+    target-branch: "main"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    assignees:
+      - "SeriousJul"
+    reviewers:
+      - "SeriousJul"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
