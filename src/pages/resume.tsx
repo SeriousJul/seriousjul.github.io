@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 
 import styles from './resume.module.css';
@@ -36,11 +36,11 @@ const resume: {
   github: string;
   summary: string[];
   skills: string[];
-  languages: {name: string; level: string}[];
+  languages: { name: string; level: string }[];
   experiences: ExperienceItem[];
   education: EducationItem[];
   certifications: Certification[];
-  scores: {name: string; score: string; date: string}[];
+  scores: { name: string; score: string; date: string }[];
 } = {
   name: 'Julien Antony',
   title: 'Software Engineer / Tech Lead',
@@ -54,8 +54,8 @@ const resume: {
   ],
   skills: ['Spring Boot', 'Software Development', 'DevOps'],
   languages: [
-    {name: 'Francais', level: 'Native or bilingual proficiency'},
-    {name: 'English', level: 'Professional working proficiency'},
+    { name: 'Francais', level: 'Native or bilingual proficiency' },
+    { name: 'English', level: 'Professional working proficiency' },
   ],
   experiences: [
     {
@@ -346,7 +346,8 @@ const resume: {
   ],
   education: [
     {
-      school: 'Ecole Nationale Superieure dInformatique et de Mathematiques Appliquees de Grenoble / ENSIMAG',
+      school:
+        'Ecole Nationale Superieure dInformatique et de Mathematiques Appliquees de Grenoble / ENSIMAG',
       degree: 'Ingénieur, Informatique et systeme dinformation',
       period: '2009 - 2012',
     },
@@ -376,15 +377,13 @@ const resume: {
       expires: 'Aug 2024',
     },
   ],
-  scores: [
-    {name: 'TOEIC', score: '825', date: 'May 2011'},
-  ],
+  scores: [{ name: 'TOEIC', score: '825', date: 'May 2011' }],
 };
 
-function Keywords({items}: {items: string[]}): ReactNode {
+function Keywords({ items }: { items: string[] }): ReactNode {
   return (
     <div className={styles.keywords}>
-      {items.map((k) => (
+      {items.map(k => (
         <span key={k} className={styles.keyword}>
           {k}
         </span>
@@ -393,7 +392,7 @@ function Keywords({items}: {items: string[]}): ReactNode {
   );
 }
 
-function SectionTitle({title}: {title: string}): ReactNode {
+function SectionTitle({ title }: { title: string }): ReactNode {
   return (
     <div className={styles.sectionTitle}>
       <h2>{title}</h2>
@@ -427,7 +426,7 @@ function SummaryPage(): ReactNode {
 
       <SectionTitle title="Top Skills" />
       <div className={styles.skillsGrid}>
-        {resume.skills.map((s) => (
+        {resume.skills.map(s => (
           <span key={s} className={styles.skillBadge}>
             {s}
           </span>
@@ -436,14 +435,14 @@ function SummaryPage(): ReactNode {
 
       <SectionTitle title="Summary" />
       <ul className={styles.summaryList}>
-        {resume.summary.map((s) => (
+        {resume.summary.map(s => (
           <li key={s}>{s}</li>
         ))}
       </ul>
 
       <SectionTitle title="Languages" />
       <div className={styles.languagesGrid}>
-        {resume.languages.map((l) => (
+        {resume.languages.map(l => (
           <div key={l.name} className={styles.languageItem}>
             <strong>{l.name}</strong>
             <span>{l.level}</span>
@@ -459,7 +458,7 @@ interface ExperiencePageProps {
   isFirst?: boolean;
 }
 
-function ExperiencePage({exp, isFirst}: ExperiencePageProps): ReactNode {
+function ExperiencePage({ exp, isFirst }: ExperiencePageProps): ReactNode {
   return (
     <div className={styles.expPage}>
       {isFirst ? null : <div className={styles.pageBreak} />}
@@ -478,7 +477,7 @@ function ExperiencePage({exp, isFirst}: ExperiencePageProps): ReactNode {
       {exp.description && <p className={styles.expDesc}>{exp.description}</p>}
       {exp.bullets && (
         <ul className={styles.expBullets}>
-          {exp.bullets.map((b) => (
+          {exp.bullets.map(b => (
             <li key={b}>{b}</li>
           ))}
         </ul>
@@ -492,7 +491,7 @@ function EducationPage(): ReactNode {
   return (
     <div className={styles.page}>
       <SectionTitle title="Education" />
-      {resume.education.map((e) => (
+      {resume.education.map(e => (
         <div key={e.school} className={styles.eduItem}>
           <h3 className={styles.eduSchool}>{e.school}</h3>
           <p className={styles.eduDegree}>{e.degree}</p>
@@ -501,7 +500,7 @@ function EducationPage(): ReactNode {
       ))}
 
       <SectionTitle title="Licenses & Certifications" />
-      {resume.certifications.map((c) => (
+      {resume.certifications.map(c => (
         <div key={c.name} className={styles.certItem}>
           <h4 className={styles.certName}>{c.name}</h4>
           <span className={styles.certIssuer}>{c.issuer}</span>
@@ -513,12 +512,10 @@ function EducationPage(): ReactNode {
       ))}
 
       <SectionTitle title="Test Scores" />
-      {resume.scores.map((s) => (
+      {resume.scores.map(s => (
         <div key={s.name} className={styles.scoreItem}>
           <h4 className={styles.scoreName}>{s.name}</h4>
-          <span>
-            Score: {s.score}
-          </span>
+          <span>Score: {s.score}</span>
           <span className={styles.scoreDate}>{s.date}</span>
         </div>
       ))}
@@ -530,7 +527,8 @@ export default function Resume(): ReactNode {
   return (
     <Layout
       title={`${resume.name} - Resume`}
-      description={`Resume of ${resume.name}, Software Engineer / Tech Lead`}>
+      description={`Resume of ${resume.name}, Software Engineer / Tech Lead`}
+    >
       <div className={styles.viewer}>
         <div className={styles.pages}>
           <SummaryPage />

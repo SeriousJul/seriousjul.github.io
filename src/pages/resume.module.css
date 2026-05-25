@@ -53,7 +53,6 @@
   }
 }
 
-
 /* Header */
 .header {
   text-align: center;
@@ -339,7 +338,7 @@
     padding: 0mm 10mm; /* Reduced margins */
   }
 
-    /* Remove page breaks for print */
+  /* Remove page breaks for print */
   .pageBreak {
     display: none;
   }
