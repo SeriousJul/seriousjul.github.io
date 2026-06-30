@@ -357,6 +357,18 @@ const SudokuGame: React.FC = () => {
     return (
         <div className={styles.gameContainer}>
             <h2 style={{ textAlign: 'center', color: isDark ? '#e0e0e0' : '#333' }}>Sudoku</h2>
+            <div style={{
+                textAlign: 'center',
+                marginBottom: '1.5rem',
+                padding: '1rem',
+                backgroundColor: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)',
+                borderRadius: 'var(--ifm-button-border-radius)',
+                maxWidth: '600px',
+                margin: '0 auto 1.5rem'
+            }}>
+
+            <p>Vibe coded using local llm (24gb VRAM). Qwen family and Gemma.</p><p>Testing various backend (vllms, lm studio, ollama, llamacpp...) with various configuration (MoE layer offloading to CPU, concurrency, context size, KV cache sharing). Good fun</p>
+            </div>
 
             {/* Intro Section */}
             <div style={{
