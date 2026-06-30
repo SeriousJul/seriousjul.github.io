@@ -89,6 +89,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/sudoku', label: 'Sudoku', position: 'left'},
         {to: '/resume', label: 'Resume', position: 'left'},
         {
           href: 'https://www.linkedin.com/in/antonyjulien',

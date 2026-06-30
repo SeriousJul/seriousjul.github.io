@@ -44,6 +44,8 @@ const resume: {
 } = {
   name: 'Julien Antony',
   title: 'Software Engineer / Tech Lead',
+  email: 'julien@example.com',
+  phone: '+352 XXX XXX XXX',
   location: 'Luxembourg, Luxembourg',
   linkedin: 'https://www.linkedin.com/in/antonyjulien',
   github: 'https://github.com/SeriousJul',
@@ -213,8 +215,6 @@ const resume: {
         'Management of agreements for the armories and shooting clubs',
         'Management of agreements for the security companies and their agents',
         'To hold electronically or print the different official documents related to these activities',
-      ],
-      bullets2: [
         'Development of the application, including workflows, front-end and batch processing',
         'Support to the testing team',
         'Documentation of the application: Integration guide and technical guide',
