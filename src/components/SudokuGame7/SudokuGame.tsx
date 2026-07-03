@@ -17,16 +17,26 @@ function isValid(board: number[][], r: number, c: number, n: number): boolean {
     return true;
 }
 
-function solveSudoku(b: number[][]): boolean {
+function shuffle<T>(arr: T[]): T[] {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function fillBoard(b: number[][]): boolean {
     for (let r = 0; r < 9; r++) {
         for (let c = 0; c < 9; c++) {
             if (b[r][c] === EMPTY) {
-                const ns = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-                for (let i = ns.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [ns[i], ns[j]] = [ns[j], ns[i]];
+                for (const n of shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9])) {
+                    if (isValid(b, r, c, n)) {
+                        b[r][c] = n;
+                        if (fillBoard(b)) return true;
+                        b[r][c] = EMPTY;
+                    }
                 }
-                for (const n of ns) { b[r][c] = n; if (solveSudoku(b)) return true; b[r][c] = EMPTY; }
                 return false;
             }
         }
@@ -34,31 +44,18 @@ function solveSudoku(b: number[][]): boolean {
     return true;
 }
 
-function fillBox(b: number[][], r0: number, c0: number) {
-    const ns = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    for (let i = 0; i < 3; i++)
-        for (let j = 0; j < 3; j++) {
-            let n: number; do { n = ns[Math.floor(Math.random() * ns.length)]; } while (!boxHas(b, r0, c0, n));
-            b[r0 + i][c0 + j] = n;
-        }
-}
-
-function boxHas(b: number[][], r0: number, c0: number, n: number): boolean {
-    for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) if (b[r0 + i][c0 + j] === n) return false;
-    return true;
-}
-
 function generateSudoku(diff: 'easy' | 'medium' | 'hard') {
     const b = Array.from({ length: 9 }, () => Array(9).fill(EMPTY));
-    for (let i = 0; i < 9; i += 3) fillBox(b, i, i);
-    solveSudoku(b);
+    fillBoard(b);
     const sol = b.map(r => [...r]);
     const removed = diff === 'easy' ? 28 : diff === 'medium' ? 42 : 52;
     const init = b.map(r => [...r]);
+    const positions = shuffle(init.flatMap((row, r) => row.map((_, c) => [r, c] as [number, number])));
     let cnt = 0;
-    while (cnt < removed) {
-        const r = Math.floor(Math.random() * 9), c = Math.floor(Math.random() * 9);
-        if (init[r][c] !== EMPTY) { init[r][c] = EMPTY; cnt++; }
+    for (const [r, c] of positions) {
+        if (cnt >= removed) break;
+        init[r][c] = EMPTY;
+        cnt++;
     }
     return { initial: init, solution: sol };
 }
