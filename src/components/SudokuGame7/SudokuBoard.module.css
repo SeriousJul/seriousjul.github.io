@@ -1,0 +1,528 @@
+/* ==================== LIGHT THEME ==================== */
+[data-theme='light'] .gameContainer {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 1.5rem 0.75rem 3rem;
+}
+
+[data-theme='light'] .boardWrap {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+[data-theme='light'] .board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    background-color: #a5d6a7;
+    border: 3px solid #2e7d32;
+    width: min(92vw, 540px);
+    height: min(92vw, 540px);
+}
+
+[data-theme='light'] .cell {
+    aspect-ratio: 1;
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: clamp(0.95rem, 3vw, 1.55rem);
+    user-select: none;
+    color: #2e7d32;
+    transition: background-color 0.15s ease;
+}
+
+[data-theme='light'] .cell:focus-visible {
+    outline: 2px solid #1565c0;
+    outline-offset: -2px;
+    z-index: 10;
+}
+
+/* Thick right borders for columns 3 and 6 */
+[data-theme='light'] .cell:nth-child(9n+3),
+[data-theme='light'] .cell:nth-child(9n+6) {
+    border-right: 2px solid #2e7d32;
+}
+
+/* No right border for last column */
+[data-theme='light'] .cell:nth-child(9n) {
+    border-right: none;
+}
+
+/* Thick bottom borders for rows 3 and 6 */
+[data-theme='light'] .cell:nth-child(n+19):nth-child(-n+27),
+[data-theme='light'] .cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #2e7d32;
+}
+
+/* No bottom border for last row */
+[data-theme='light'] .cell:nth-child(n+73) {
+    border-bottom: none;
+}
+
+/* Alternating box background colors */
+[data-theme='light'] .cell:nth-child(9n+1):nth-child(-n+3),
+[data-theme='light'] .cell:nth-child(9n+4):nth-child(-n+6),
+[data-theme='light'] .cell:nth-child(9n+7):nth-child(-n+9) {
+    background-color: #f1f8e9;
+}
+
+[data-theme='light'] .cell:nth-child(n+10):nth-child(-n+18),
+[data-theme='light'] .cell:nth-child(n+28):nth-child(-n+36),
+[data-theme='light'] .cell:nth-child(n+46):nth-child(-n+54) {
+    background-color: #ffffff;
+}
+
+[data-theme='light'] .selCell {
+    background-color: #bbdefb !important;
+    outline: 2px solid #1565c0;
+    z-index: 10;
+}
+
+[data-theme='light'] .hlCell {
+    background-color: #e8f5e9;
+}
+
+[data-theme='light'] .sameNum {
+    background-color: rgba(46, 133, 85, 0.2);
+}
+
+/* Fixed (given) numbers — bold, dark green */
+[data-theme='light'] .fixedCell {
+    font-weight: 700;
+    color: #1b5e20;
+}
+
+[data-theme='light'] .givenDigit {
+    font-weight: 700;
+    color: #1b5e20;
+}
+
+/* User-entered numbers — blue, italic to distinguish from fixed */
+[data-theme='light'] .userCell {
+    color: #1565c0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+[data-theme='light'] .userDigit {
+    color: #1565c0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+[data-theme='light'] .conflict {
+    background-color: rgba(211, 47, 47, 0.2) !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Hint highlight — golden glow */
+[data-theme='light'] .hintCell {
+    background-color: #fff9c4 !important;
+    box-shadow: inset 0 0 0 3px #f9a825;
+    animation: hintPulse 1.5s ease-in-out;
+}
+
+/* ==================== DARK THEME ==================== */
+[data-theme='dark'] .gameContainer {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 1.5rem 0.75rem 3rem;
+}
+
+[data-theme='dark'] .boardWrap {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+[data-theme='dark'] .board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    background-color: #263238;
+    border: 3px solid #78909c;
+    width: min(92vw, 540px);
+    height: min(92vw, 540px);
+}
+
+[data-theme='dark'] .cell {
+    aspect-ratio: 1;
+    position: relative;
+    background-color: #37474f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: clamp(0.95rem, 3vw, 1.55rem);
+    user-select: none;
+    color: #b0bec5;
+    transition: background-color 0.15s ease;
+}
+
+[data-theme='dark'] .cell:focus-visible {
+    outline: 2px solid #80cbc4;
+    outline-offset: -2px;
+    z-index: 10;
+}
+
+/* Thick right borders */
+[data-theme='dark'] .cell:nth-child(9n+3),
+[data-theme='dark'] .cell:nth-child(9n+6) {
+    border-right: 2px solid #78909c;
+}
+
+[data-theme='dark'] .cell:nth-child(9n) {
+    border-right: none;
+}
+
+/* Thick bottom borders */
+[data-theme='dark'] .cell:nth-child(n+19):nth-child(-n+27),
+[data-theme='dark'] .cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #78909c;
+}
+
+[data-theme='dark'] .cell:nth-child(n+73) {
+    border-bottom: none;
+}
+
+/* Alternating box background colors */
+[data-theme='dark'] .cell:nth-child(9n+1):nth-child(-n+3),
+[data-theme='dark'] .cell:nth-child(9n+4):nth-child(-n+6),
+[data-theme='dark'] .cell:nth-child(9n+7):nth-child(-n+9) {
+    background-color: #2e3f4a;
+}
+
+[data-theme='dark'] .selCell {
+    background-color: #0d47a1 !important;
+    outline: 2px solid #80cbc4;
+    z-index: 10;
+}
+
+[data-theme='dark'] .hlCell {
+    background-color: #3e5c6b;
+}
+
+[data-theme='dark'] .sameNum {
+    background-color: rgba(128, 203, 196, 0.2);
+}
+
+/* Fixed (given) numbers */
+[data-theme='dark'] .fixedCell {
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+[data-theme='dark'] .givenDigit {
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+/* User-entered numbers — teal/cyan to distinguish from fixed */
+[data-theme='dark'] .userCell {
+    color: #80cbc4;
+    font-style: italic;
+    font-weight: 500;
+}
+
+[data-theme='dark'] .userDigit {
+    color: #80cbc4;
+    font-style: italic;
+    font-weight: 500;
+}
+
+[data-theme='dark'] .conflict {
+    background-color: rgba(239, 83, 80, 0.3) !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Hint highlight — golden glow in dark mode */
+[data-theme='dark'] .hintCell {
+    background-color: #5d4037 !important;
+    box-shadow: inset 0 0 0 3px #ffb300;
+    animation: hintPulse 1.5s ease-in-out;
+}
+
+/* ==================== PENCIL MARKS ==================== */
+.pencilGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pencilCell {
+    font-size: clamp(0.35rem, 1.2vw, 0.55rem);
+    color: var(--ifm-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ==================== DIFFICULTY BAR ==================== */
+.diffBar {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.diffBtn {
+    padding: 0.45rem 1.2rem;
+    border-radius: var(--ifm-button-border-radius);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 1px solid var(--ifm-color-primary);
+    background: transparent;
+    color: var(--ifm-font-color-base);
+    transition: all 0.2s ease;
+}
+
+.diffBtn:hover {
+    background-color: var(--ifm-color-primary-lightest);
+}
+
+.diffActive {
+    background-color: var(--ifm-color-primary) !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+/* ==================== STATUS BAR ==================== */
+.statusBar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.statusItem {
+    padding: 0.3rem 0.7rem;
+    background-color: var(--ifm-background-surface-color);
+    border-radius: var(--ifm-button-border-radius);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    color: var(--ifm-font-color-base);
+}
+
+/* ==================== PROGRESS BAR ==================== */
+.progressWrap {
+    position: relative;
+    width: min(92vw, 540px);
+    margin: 0 auto 0.75rem;
+    height: 8px;
+    background-color: var(--ifm-background-surface-color);
+    border-radius: 4px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    overflow: hidden;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: var(--ifm-color-primary);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.progressText {
+    position: absolute;
+    right: 8px;
+    top: -18px;
+    font-size: 0.75rem;
+    color: var(--ifm-color-secondary);
+}
+
+/* ==================== CANDIDATES BAR ==================== */
+.candidatesBar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.candidatesLabel {
+    font-size: 0.85rem;
+    color: var(--ifm-color-secondary);
+    font-weight: 500;
+}
+
+.candidatesNums {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.candidateBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--ifm-color-primary);
+    background: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.candidateBtn:hover {
+    background-color: var(--ifm-color-primary);
+    color: white;
+}
+
+.candidateBtn:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
+/* ==================== PENCIL INDICATOR ==================== */
+.pencilInd {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--ifm-color-warning-lightest);
+    color: var(--ifm-color-warning-dark);
+    border-radius: var(--ifm-button-border-radius);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ==================== MESSAGES ==================== */
+.winMsg {
+    padding: 1rem;
+    background-color: rgba(46, 133, 85, 0.12);
+    border: 2px solid var(--ifm-color-success);
+    color: var(--ifm-color-success-dark);
+    border-radius: var(--ifm-button-border-radius);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.errToast {
+    padding: 0.6rem 1rem;
+    background-color: rgba(211, 47, 47, 0.08);
+    border: 1px solid #d32f2f;
+    color: #c62828;
+    border-radius: var(--ifm-button-border-radius);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==================== HOW TO PLAY ==================== */
+.howToPlay {
+    padding: 1rem;
+    background-color: var(--ifm-background-surface-color);
+    border-radius: var(--ifm-button-border-radius);
+    max-width: 540px;
+    margin: 0 auto 1rem;
+}
+
+.kbdRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ifm-color-secondary);
+    margin-top: 0.5rem;
+}
+
+kbd {
+    background-color: var(--ifm-code-background);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 4px;
+    padding: 0.1em 0.45em;
+    font-family: inherit;
+    font-size: 0.85em;
+}
+
+/* ==================== CONTROLS ROW ==================== */
+.ctrlRow {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--ifm-button-border-radius);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+    transition: opacity 0.2s, background-color 0.2s;
+    background-color: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: var(--ifm-color-primary) !important;
+    color: white !important;
+}
+
+/* ==================== NUMPAD ==================== */
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.4rem;
+    margin-top: 1rem;
+    width: min(92vw, 540px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.numBtn {
+    aspect-ratio: 1;
+    border-radius: var(--ifm-button-border-radius);
+    cursor: pointer;
+    font-size: clamp(1rem, 3vw, 1.35rem);
+    padding: 0.25rem;
+    background-color: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    transition: all 0.15s ease;
+}
+
+.numBtn:hover {
+    background-color: var(--ifm-color-primary-lightest);
+}
+
+.numBtn:focus-visible {
+    outline: 2px solid var(--ifm-color-primary);
+    outline-offset: 2px;
+}
+
+.delBtn {
+    font-size: clamp(0.85rem, 2.5vw, 1.1rem) !important;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+@keyframes hintPulse {
+    0% { box-shadow: inset 0 0 0 3px #f9a825; }
+    50% { box-shadow: inset 0 0 20px 5px #f9a825; }
+    100% { box-shadow: inset 0 0 0 3px #f9a825; }
+}
