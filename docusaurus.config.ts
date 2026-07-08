@@ -103,6 +103,7 @@ const config: Config = {
             { to: '/sudoku7', label: 'Sudoku 7' },
           ],
         },
+        {to: '/snake', label: 'Snake', position: 'left'},
         {to: '/resume', label: 'Resume', position: 'left'},
         {
           href: 'https://www.linkedin.com/in/antonyjulien',
