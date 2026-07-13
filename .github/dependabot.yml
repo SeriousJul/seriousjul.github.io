@@ -20,6 +20,10 @@ updates:
     commit-message:
       prefix: "deps"
       include: "scope"
+    groups:
+      docusaurus:
+        patterns:
+          - "@docusaurus/*"
     ignore:
       # Ignore major version updates for now
       - dependency-name: "*"
