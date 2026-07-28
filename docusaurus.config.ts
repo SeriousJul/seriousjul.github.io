@@ -104,6 +104,7 @@ const config: Config = {
           ],
         },
         {to: '/resume', label: 'Resume', position: 'left'},
+        {to: '/snake', label: 'Snake', position: 'left'},
         {
           href: 'https://www.linkedin.com/in/antonyjulien',
           label: 'LinkedIn',
