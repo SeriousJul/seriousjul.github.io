@@ -27,6 +27,7 @@ export default function SnakeGame() {
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
   const handleTouchStart = useCallback((e: React.TouchEvent<HTMLCanvasElement>) => {
+    e.preventDefault();
     const t = e.touches[0];
     touchStartRef.current = { x: t.clientX, y: t.clientY };
   }, []);

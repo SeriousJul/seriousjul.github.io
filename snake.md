@@ -386,6 +386,11 @@ Each use case describes a scenario, the steps to execute it, and the expected re
 - **Steps**: Start the game and steer the snake without eating any food. Watch the canvas as the snake moves.
 - **Expected**: The snake's position updates on the canvas every tick. The movement is smooth and continuous — the snake does not appear frozen between food eats.
 
+### UC-32: Touching the canvas does not scroll the page
+
+- **Steps**: On a mobile device, touch and swipe on the game canvas to control the snake.
+- **Expected**: The swipe registers as a direction change. The page does not scroll. Scrolling outside the canvas (e.g., on the scoreboard or controls area) still works normally.
+
 ---
 
 ## Non-Goals (Out of Scope)
