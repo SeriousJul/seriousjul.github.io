@@ -22,6 +22,7 @@ export default function SnakeGame() {
   } = useSnakeGame();
 
   const [showSettings, setShowSettings] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(false);
 
   // Touch handlers for canvas swipe
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
@@ -135,6 +136,44 @@ export default function SnakeGame() {
 
       {showSettings && (
         <SnakeSettings config={config} onConfigChange={handleConfigChange} />
+      )}
+
+      <button
+        className={styles.controlButton}
+        style={{ marginTop: '12px' }}
+        onClick={() => setShowInstructions((s) => !s)}
+      >
+        {showInstructions ? 'Hide' : 'Instructions'}
+      </button>
+
+      {showInstructions && (
+        <div className={styles.instructions}>
+          <h3 className={styles.instructionsTitle}>How to Play</h3>
+          <table className={styles.instructionsTable}>
+            <tbody>
+              <tr>
+                <td><code>↑ ↓ ← →</code> / <code>W</code> <code>A</code> <code>S</code> <code>D</code></td>
+                <td>Change direction</td>
+              </tr>
+              <tr>
+                <td><code>Space</code> / <code>P</code></td>
+                <td>Pause / Resume</td>
+              </tr>
+              <tr>
+                <td><code>Enter</code> / <code>R</code></td>
+                <td>Restart</td>
+              </tr>
+              <tr>
+                <td>Swipe on canvas</td>
+                <td>Change direction (mobile)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className={styles.instructionsText}>
+            Eat the food to grow and score points. Avoid colliding with yourself.
+            In wall mode "die" walls are fatal; in "wrap" the snake passes through.
+          </p>
+        </div>
       )}
     </div>
   );

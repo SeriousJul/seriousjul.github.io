@@ -391,6 +391,11 @@ Each use case describes a scenario, the steps to execute it, and the expected re
 - **Steps**: On a mobile device, touch and swipe on the game canvas to control the snake.
 - **Expected**: The swipe registers as a direction change. The page does not scroll. Scrolling outside the canvas (e.g., on the scoreboard or controls area) still works normally.
 
+### UC-33: Instructions panel
+
+- **Steps**: Click the "Instructions" button below the controls. Then click "Hide" to close it.
+- **Expected**: Clicking "Instructions" reveals a panel showing a control reference table (arrow keys / WASD for direction, Space / P for pause, Enter / R for restart, swipe for mobile) and a brief description of gameplay rules. Clicking "Hide" collapses the panel.
+
 ---
 
 ## Non-Goals (Out of Scope)
