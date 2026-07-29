@@ -200,52 +200,16 @@ export function useSnakeGame() {
     return false; // not game over
   }, []);
 
-  // Game loop via rAF
-  useEffect(() => {
-    if (status !== 'playing') {
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-      return;
-    }
-    lastTickRef.current = 0;
-
-    const loop = (ts: number) => {
-      if (statusRef.current !== 'playing') return;
-      if (!lastTickRef.current) lastTickRef.current = ts;
-
-      const cfg = configRef.current;
-      let interval = cfg.tickInterval;
-      if (cfg.speedScaling) {
-        const reduction = Math.min(snakeRef.current.length * 2, cfg.tickInterval * 0.6);
-        interval = Math.max(cfg.tickInterval - reduction, 30);
-      }
-
-      if (ts - lastTickRef.current >= interval) {
-        const gameOver = tick();
-        lastTickRef.current = ts;
-        if (gameOver) {
-          setStatus('gameOver');
-          statusRef.current = 'gameOver';
-          playGameOverSound(cfg.soundEnabled);
-          return;
-        }
-      }
-
-      animFrameRef.current = requestAnimationFrame(loop);
-    };
-
-    animFrameRef.current = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(animFrameRef.current);
-  }, [status, tick]);
-
-  // Canvas rendering
-  useEffect(() => {
+  // Draw the current game state onto the canvas
+  const draw = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const cs = cellSize;
-    const gs = config.gridSize;
+    const cfg = configRef.current;
+    const gs = cfg.gridSize;
     const dpr = window.devicePixelRatio || 1;
     const pxSize = gs * cs;
 
@@ -255,14 +219,14 @@ export function useSnakeGame() {
     canvas.style.height = `${pxSize}px`;
     ctx.scale(dpr, dpr);
 
-    const colors = THEMES[config.theme];
+    const colors = THEMES[cfg.theme];
 
     // Background
     ctx.fillStyle = colors.background;
     ctx.fillRect(0, 0, pxSize, pxSize);
 
     // Grid lines
-    if (config.showGrid) {
+    if (cfg.showGrid) {
       ctx.strokeStyle = colors.gridLines;
       ctx.lineWidth = 0.5;
       for (let i = 0; i <= gs; i++) {
@@ -302,7 +266,54 @@ export function useSnakeGame() {
         cs - pad * 2
       );
     }
-  }, [cellSize, config, score, status]);
+  }, [cellSize]);
+
+  // Redraw whenever cell size, config, or status changes (initial render + settings updates)
+  useEffect(() => {
+    draw();
+  }, [cellSize, config, score, status, draw]);
+
+  // Game loop via rAF — tick + render
+  useEffect(() => {
+    if (status !== 'playing') {
+      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+      return;
+    }
+    lastTickRef.current = 0;
+
+    const loop = (ts: number) => {
+      if (statusRef.current !== 'playing') {
+        draw(); // final frame before pausing/stopping
+        return;
+      }
+      if (!lastTickRef.current) lastTickRef.current = ts;
+
+      const cfg = configRef.current;
+      let interval = cfg.tickInterval;
+      if (cfg.speedScaling) {
+        const reduction = Math.min(snakeRef.current.length * 2, cfg.tickInterval * 0.6);
+        interval = Math.max(cfg.tickInterval - reduction, 30);
+      }
+
+      if (ts - lastTickRef.current >= interval) {
+        const gameOver = tick();
+        lastTickRef.current = ts;
+        if (gameOver) {
+          setStatus('gameOver');
+          statusRef.current = 'gameOver';
+          playGameOverSound(cfg.soundEnabled);
+          draw();
+          return;
+        }
+      }
+
+      draw();
+      animFrameRef.current = requestAnimationFrame(loop);
+    };
+
+    animFrameRef.current = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(animFrameRef.current);
+  }, [status, tick, draw]);
 
   // Direction input
   const onDirection = useCallback((dir: Direction) => {
