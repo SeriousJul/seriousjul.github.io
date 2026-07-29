@@ -404,7 +404,12 @@ Each use case describes a scenario, the steps to execute it, and the expected re
 ### UC-35: D-pad does not scroll the page on mobile
 
 - **Steps**: On a mobile device, press and hold a direction button on the D-pad, then drag across the buttons.
-- **Expected**: The page does not scroll. Direction changes register as the finger moves over buttons. The D-pad has `touch-action: none` to prevent browser touch gestures.
+- **Expected**: The page does not scroll. Direction changes register as the finger moves over buttons. The entire snake page has `touch-action: none` and `overscroll-behavior: none` to prevent scroll.
+
+### UC-36: Canvas does not shrink on first touch
+
+- **Steps**: On a mobile device, start playing by touching the canvas or D-pad. Tap and play without intentionally resizing.
+- **Expected**: The canvas retains its original size. It does not suddenly shrink on the first touch. The resize handler uses `visualViewport.height` (which is stable despite toolbar hide/show) and debounces recalculations to avoid reacting to transient viewport changes.
 
 ---
 

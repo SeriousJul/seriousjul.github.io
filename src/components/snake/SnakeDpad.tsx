@@ -31,14 +31,19 @@ export default function SnakeDpad({
     [onDirection],
   );
 
+  const handleTouchStart = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <div
       className={styles.dpad}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
+      onTouchStart={handleTouchStart}
     >
       {/* Row 1: empty, up, empty */}
-      <div />
+      <div className={styles.dpadCell} />
       <button
         className={styles.dpadButton}
         onPointerDown={handlePointerDown('up')}
@@ -46,7 +51,7 @@ export default function SnakeDpad({
       >
         ▲
       </button>
-      <div />
+      <div className={styles.dpadCell} />
 
       {/* Row 2: left, center, right */}
       <button
@@ -66,7 +71,7 @@ export default function SnakeDpad({
       </button>
 
       {/* Row 3: empty, down, empty */}
-      <div />
+      <div className={styles.dpadCell} />
       <button
         className={styles.dpadButton}
         onPointerDown={handlePointerDown('down')}
@@ -74,7 +79,7 @@ export default function SnakeDpad({
       >
         ▼
       </button>
-      <div />
+      <div className={styles.dpadCell} />
     </div>
   );
 }

@@ -122,18 +122,33 @@ export function useSnakeGame() {
     statusRef.current = status;
   }, [status]);
 
-  // Compute cell size on resize
+  // Compute cell size on resize (debounced to avoid toolbar flicker on mobile)
   useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout> | null = null;
+
     const calc = () => {
       if (!containerRef.current) return;
+      // Use visualViewport.height (accounts for mobile browser chrome)
+      // rather than window.innerHeight which changes when toolbars hide/show.
+      const viewportH =
+        window.visualViewport?.height ?? window.innerHeight;
       const maxW = containerRef.current.clientWidth - 32;
-      const maxH = window.innerHeight * 0.55;
+      const maxH = viewportH * 0.55;
       const cs = Math.floor(Math.min(maxW, maxH) / config.gridSize);
       setCellSize(Math.max(cs, 5));
     };
+
+    const onResize = () => {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(calc, 250);
+    };
+
     calc();
-    window.addEventListener('resize', calc);
-    return () => window.removeEventListener('resize', calc);
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+      if (timeout) clearTimeout(timeout);
+    };
   }, [config.gridSize]);
 
   // Core game tick

@@ -3,8 +3,10 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--ifm-background-color);
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 /* Scoreboard */
@@ -34,18 +36,21 @@
 .canvas-container {
   position: relative;
   display: inline-block;
+  touch-action: none;
 }
 
 .canvas-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  touch-action: none;
 }
 
 canvas {
   display: block;
   border-radius: 4px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  touch-action: none;
 }
 
 /* Overlay */
@@ -253,6 +258,11 @@ canvas {
   user-select: none;
   -webkit-user-select: none;
   touch-action: none;
+  width: 100%;
+}
+
+.dpadCell {
+  touch-action: none;
 }
 
 .dpadButton {
@@ -271,6 +281,7 @@ canvas {
   transition: background 0.1s, border-color 0.1s;
   touch-action: none;
   -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 .dpadButton:active {
