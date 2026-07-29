@@ -5,6 +5,7 @@ import SnakeScoreboard from './SnakeScoreboard';
 import SnakeOverlay from './SnakeOverlay';
 import SnakeControls from './SnakeControls';
 import SnakeSettings from './SnakeSettings';
+import SnakeDpad from './SnakeDpad';
 import styles from './SnakeGame.module.css';
 
 export default function SnakeGame() {
@@ -137,6 +138,8 @@ export default function SnakeGame() {
       {showSettings && (
         <SnakeSettings config={config} onConfigChange={handleConfigChange} />
       )}
+
+      <SnakeDpad onDirection={onDirection} />
 
       <button
         className={styles.controlButton}

@@ -396,6 +396,16 @@ Each use case describes a scenario, the steps to execute it, and the expected re
 - **Steps**: Click the "Instructions" button below the controls. Then click "Hide" to close it.
 - **Expected**: Clicking "Instructions" reveals a panel showing a control reference table (arrow keys / WASD for direction, Space / P for pause, Enter / R for restart, swipe for mobile) and a brief description of gameplay rules. Clicking "Hide" collapses the panel.
 
+### UC-34: On-screen D-pad controls
+
+- **Steps**: On any device, tap the ▲ button on the on-screen D-pad below the controls.
+- **Expected**: The snake changes direction to up (or starts the game if idle). The button highlights with the primary color while pressed (active state). Tapping ◀/▼/▶ works analogously for left/down/right.
+
+### UC-35: D-pad does not scroll the page on mobile
+
+- **Steps**: On a mobile device, press and hold a direction button on the D-pad, then drag across the buttons.
+- **Expected**: The page does not scroll. Direction changes register as the finger moves over buttons. The D-pad has `touch-action: none` to prevent browser touch gestures.
+
 ---
 
 ## Non-Goals (Out of Scope)

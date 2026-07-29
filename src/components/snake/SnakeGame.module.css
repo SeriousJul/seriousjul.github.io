@@ -242,6 +242,48 @@ canvas {
   width: 100%;
 }
 
+/* D-pad — on-screen directional controls */
+.dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 4px;
+  justify-content: center;
+  margin-top: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.dpadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dpadButton:active {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-color: var(--ifm-color-primary);
+}
+
+.dpadCenter {
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+}
+
 .instructionsTitle {
   margin: 0 0 12px;
   font-size: 1.1rem;
