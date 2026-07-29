@@ -381,6 +381,11 @@ Each use case describes a scenario, the steps to execute it, and the expected re
 - **Steps**: Set keyboard layout to any layout. Press arrow keys.
 - **Expected**: Arrow keys (`ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`) produce the same direction inputs on all keyboard layouts since their `e.code` values are layout-independent.
 
+### UC-31: Snake renders every tick, not only on score changes
+
+- **Steps**: Start the game and steer the snake without eating any food. Watch the canvas as the snake moves.
+- **Expected**: The snake's position updates on the canvas every tick. The movement is smooth and continuous — the snake does not appear frozen between food eats.
+
 ---
 
 ## Non-Goals (Out of Scope)
