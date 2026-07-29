@@ -366,6 +366,21 @@ Each use case describes a scenario, the steps to execute it, and the expected re
 - **Steps**: Change theme to "pastel", disable grid lines, disable sound. Reload the page.
 - **Expected**: All three settings are restored to their last values.
 
+### UC-28: WASD works on AZERTY layout
+
+- **Steps**: Set keyboard layout to AZERTY. Navigate to `/snake` and press the physical keys at the W/A/S/D positions (which produce `z`/`q`/`w`/`d` as `e.key` values).
+- **Expected**: The snake changes direction correctly in all four cases. Direction detection uses `e.code` (`KeyW`, `KeyA`, `KeyS`, `KeyD`) which maps to physical key positions, not the character produced by the layout.
+
+### UC-29: Pause/Restart keys work regardless of layout
+
+- **Steps**: Set keyboard layout to non-QWERTY (e.g., Dvorak, Colemak). Press the physical P key to pause, then the physical R key to restart.
+- **Expected**: Pause (`KeyP`) and Restart (`KeyR`) work correctly, regardless of what character the layout produces.
+
+### UC-30: Arrow keys work regardless of layout
+
+- **Steps**: Set keyboard layout to any layout. Press arrow keys.
+- **Expected**: Arrow keys (`ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`) produce the same direction inputs on all keyboard layouts since their `e.code` values are layout-independent.
+
 ---
 
 ## Non-Goals (Out of Scope)

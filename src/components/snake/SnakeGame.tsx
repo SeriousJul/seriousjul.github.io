@@ -56,7 +56,7 @@ export default function SnakeGame() {
     [onDirection]
   );
 
-  // Keyboard input
+  // Keyboard input — uses e.code for layout-agnostic key detection
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       const dirMap: Record<string, 'up' | 'down' | 'left' | 'right'> = {
@@ -64,29 +64,25 @@ export default function SnakeGame() {
         ArrowDown: 'down',
         ArrowLeft: 'left',
         ArrowRight: 'right',
-        w: 'up',
-        s: 'down',
-        a: 'left',
-        d: 'right',
-        W: 'up',
-        S: 'down',
-        A: 'left',
-        D: 'right',
+        KeyW: 'up',
+        KeyS: 'down',
+        KeyA: 'left',
+        KeyD: 'right',
       };
 
-      if (e.key === ' ' || e.key === 'p' || e.key === 'P') {
+      if (e.code === 'Space' || e.code === 'KeyP') {
         e.preventDefault();
         onTogglePause();
         return;
       }
 
-      if (e.key === 'Enter' || e.key === 'r' || e.key === 'R') {
+      if (e.code === 'Enter' || e.code === 'KeyR') {
         e.preventDefault();
         onRestart();
         return;
       }
 
-      const dir = dirMap[e.key];
+      const dir = dirMap[e.code];
       if (dir) {
         e.preventDefault();
         onDirection(dir);

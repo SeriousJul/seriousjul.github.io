@@ -308,8 +308,8 @@ export function useSnakeGame() {
   const onDirection = useCallback((dir: Direction) => {
     // Start game from idle
     if (statusRef.current === 'idle') {
-      setStatus('playing');
       statusRef.current = 'playing';
+      setStatus('playing');
     }
     if (statusRef.current !== 'playing') return;
 
@@ -322,11 +322,11 @@ export function useSnakeGame() {
   // Pause / Resume
   const onTogglePause = useCallback(() => {
     if (statusRef.current === 'playing') {
-      setStatus('paused');
       statusRef.current = 'paused';
+      setStatus('paused');
     } else if (statusRef.current === 'paused') {
-      setStatus('playing');
       statusRef.current = 'playing';
+      setStatus('playing');
     }
   }, []);
 
@@ -340,8 +340,8 @@ export function useSnakeGame() {
     queuedDirRef.current = null;
     scoreRef.current = 0;
     setScore(0);
-    setStatus('playing');
     statusRef.current = 'playing';
+    setStatus('playing');
     lastTickRef.current = 0;
   }, []);
 
