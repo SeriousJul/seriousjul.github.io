@@ -165,10 +165,11 @@ const SudokuGameV2: React.FC = () => {
                     if (initialBoard[r][c] === EMPTY) { sr = r; sc = c; break outer; }
                 }
             }
-            if (sr === undefined) return; // board full
+            // Both undefined means no empty cell was found.
+            if (sr === undefined || sc === undefined) return;
         }
 
-        const row = sr!, col = sc!;
+        const row = sr, col = sc;
         if (initialBoard[row][col] !== EMPTY) return; // can't edit clues
 
         setPencil(prev => {
@@ -176,7 +177,11 @@ const SudokuGameV2: React.FC = () => {
             if (pencilMode) {
                 // Toggle the mark.
                 const idx = next[row][col].indexOf(num);
-                if (idx === -1) { next[row][col].push(num).sort((a, b) => a - b); }
+                if (idx === -1) {
+                    // push() returns a length, so sort the cell itself.
+                    next[row][col].push(num);
+                    next[row][col].sort((a, b) => a - b);
+                }
                 else next[row][col].splice(idx, 1);
             } else {
                 // Place value.
@@ -192,7 +197,9 @@ const SudokuGameV2: React.FC = () => {
                         setConflict(null);
                         // If the number matches solution, clear related pencil marks.
                         if (num === solution[row][col]) {
-                            const nr = nb.map(r => r.map(c => [...c]));
+                            // Deep-copy the pencil grid. Copying the board instead
+                            // spreads plain numbers, which throws.
+                            const nr = next.map(r => r.map(c => [...c]));
                             nr[row][col] = [];
                             for (let i = 0; i < 9; i++) {
                                 nr[row][i] = nr[row][i].filter(x => x !== num);
@@ -224,8 +231,9 @@ const SudokuGameV2: React.FC = () => {
             return next;
         });
 
-        if (!pencilMode && sr !== selected?.[0] || sc !== selected?.[1]) {
-            setSelected([sr, sc]);
+        // A click selects in either mode, so only the position decides here.
+        if (row !== selected?.[0] || col !== selected?.[1]) {
+            setSelected([row, col]);
         }
     }, [selected, pencilMode, initialBoard, solution, won, conflicts]);
 
