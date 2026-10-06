@@ -1,7 +1,12 @@
 /**
  * Regression checks for the tinypool pin in package-lock.json.
  *
- * Covers the open tinypool advisory:
+ * Covers the open tinypool advisories:
+ *
+ *   CVE-2026-104848  new Tinypool(options)  options.env and
+ *                    options.execArgv read through Object.prototype and
+ *                    passed to new Worker(), patched in 2.1.1 by building
+ *                    the options object with a null prototype
  *
  *   CVE-2026-104849  run(task, options)  options.filename read through
  *                    Object.prototype, patched in 2.1.2 by copying every
@@ -72,22 +77,26 @@
  *
  * Verified behaviour of this file against the two states that matter, each
  * measured by resolving that version in a project tree and re-running this
- * file from it. 7 leaf tests per run:
+ * file from it. 10 leaf tests per run:
  *
- *   1.1.1   the replaced version    fails 3 of 7. The advisory-shape case
+ *   1.1.1   the replaced version    fails 5 of 10. The advisory-shape case
  *                                   fails because the task is answered by
- *                                   the attacker worker, and the two
+ *                                   the attacker worker, the two
  *                                   version-floor checks fail against the
- *                                   lockfile. The no-options and explicit
- *                                   filename cases pass, because they are
- *                                   not the vulnerability.
- *   2.1.2   first patched           passes 7 of 7
- *   absent  nothing to exercise     all 2 suites skipped, exit 0
+ *                                   lockfile, and the two worker-options
+ *                                   pollution cases fail because the
+ *                                   polluted execArgv and env reach the
+ *                                   workers. The no-options and
+ *                                   explicit-own-option cases pass, because
+ *                                   they are not the vulnerability.
+ *   2.1.2   first patched           passes 10 of 10
+ *   absent  nothing to exercise     all 3 suites skipped, exit 0
  */
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { createRequire } from 'node:module';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -95,7 +104,9 @@ const require = createRequire(import.meta.url);
 const here = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(here, '..');
 
-// CVE-2026-104849 first patched. The floor the title of this change claims.
+// The higher of the two first patched versions, 2.1.1 for
+// CVE-2026-104848 and 2.1.2 for CVE-2026-104849. The floor the lockfile
+// checks defend, so one pin keeps both advisories closed.
 const MINIMUM_PIN = '2.1.2';
 
 const legitimateWorker = path.join(
@@ -109,6 +120,12 @@ const maliciousWorker = path.join(
   'fixtures',
   'tinypool',
   'malicious-worker.mjs'
+);
+const envReportWorker = path.join(
+  here,
+  'fixtures',
+  'tinypool',
+  'env-report-worker.mjs'
 );
 
 let Tinypool = null;
@@ -143,21 +160,21 @@ const suiteOptions = skipReason ? { skip: skipReason } : {};
 const suite = (title, body) => describe(title, suiteOptions, body);
 const SUITE_TITLE_SUFFIX = version ?? 'not installed';
 
-// Set Object.prototype.filename for the duration of `body` and delete it on
-// the way out, so no later test inherits the pollution. Object.prototype has
-// no own filename, so the assertion below guards against a collision this
-// file could not clean up.
-function withPrototypeFilename(pollutedValue, body) {
+// Set an own property on Object.prototype for the duration of `body` and
+// delete it on the way out, so no later test inherits the pollution.
+// Object.prototype carries none of the keys this file tests, so the
+// assertion guards against a collision this file could not clean up.
+function withPrototypeProperty(key, pollutedValue, body) {
   assert.ok(
-    !Object.hasOwn(Object.prototype, 'filename'),
-    'Object.prototype already carries an own filename, so this file cannot ' +
-      'set and clean up the pollution it is testing'
+    !Object.hasOwn(Object.prototype, key),
+    `Object.prototype already carries an own ${key}, so this file cannot ` +
+      `set and clean up the pollution it is testing`
   );
-  Object.prototype.filename = pollutedValue;
+  Object.prototype[key] = pollutedValue;
   try {
     return body();
   } finally {
-    delete Object.prototype.filename;
+    delete Object.prototype[key];
   }
 }
 
@@ -345,7 +362,8 @@ suite(
       // attacker's fixture instead.
       await withLegitimatePool(async pool => {
         const controller = new AbortController();
-        const result = await withPrototypeFilename(
+        const result = await withPrototypeProperty(
+          'filename',
           maliciousWorker,
           () => pool.run(TASK, { signal: controller.signal })
         );
@@ -371,8 +389,10 @@ suite(
       // records that the unguarded call shape stays safe, so a "fix" that
       // broke the no-options path would be caught here.
       await withLegitimatePool(async pool => {
-        const result = await withPrototypeFilename(maliciousWorker, () =>
-          pool.run(TASK)
+        const result = await withPrototypeProperty(
+          'filename',
+          maliciousWorker,
+          () => pool.run(TASK)
         );
         assert.equal(
           result.by,
@@ -422,6 +442,169 @@ suite(
           result.stolen,
           TASK,
           'the explicitly named worker did not receive the task data intact'
+        );
+      });
+    });
+  }
+);
+
+// The environment key the env-report fixture reads back, so a polluted or
+// an explicitly passed object can be told apart from the host environment
+// by the value alone.
+const ENV_MARKER_KEY = 'TINYPPOOL_ENV_MARKER';
+
+/**
+ * Write the advisory's payload into `dir`: attacker code that writes a
+ * marker file the moment it loads. The payload is self-contained, like the
+ * advisory's, so the test only ever has to check one file name.
+ */
+function writePayload(dir) {
+  fs.writeFileSync(
+    path.join(dir, 'payload.cjs'),
+    [
+      "const fs = require('node:fs');",
+      "const path = require('node:path');",
+      'fs.writeFileSync(',
+      "  path.join(__dirname, 'RCE_PROOF.txt'),",
+      "  'code execution achieved, pid=' + process.pid",
+      ');',
+      '',
+    ].join('\n')
+  );
+}
+
+// A throwaway directory for one test's payload and marker, removed on the
+// way out whatever happened.
+async function withScratchDir(body) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tinypool-pp-'));
+  try {
+    return await body(dir);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+suite(
+  `prototype pollution cannot inject worker options at pool construction (${SUITE_TITLE_SUFFIX})`,
+  () => {
+    it('does not load a module named by a polluted Object.prototype.execArgv', async () => {
+      // The advisory's proof of concept, exactly: an upstream parser puts
+      // execArgv on Object.prototype, the pool is constructed with no own
+      // execArgv, and every worker it spawns must start clean. On the
+      // vulnerable versions the polluted value is read off the prototype
+      // chain and passed explicitly to new Worker(), so the attacker module
+      // loads before the first task runs and the marker file appears.
+      await withScratchDir(async dir => {
+        writePayload(dir);
+        await withPrototypeProperty(
+          'execArgv',
+          ['--require', path.join(dir, 'payload.cjs')],
+          async () => {
+            await withLegitimatePool(async pool => {
+              const result = await pool.run(TASK);
+              assert.equal(
+                result.by,
+                'legitimate',
+                'the task was not answered by the constructed worker: ' +
+                  JSON.stringify(result)
+              );
+              assert.deepEqual(result.processed, TASK);
+            });
+            assert.ok(
+              !fs.existsSync(path.join(dir, 'RCE_PROOF.txt')),
+              'the execArgv payload wrote its marker file, so the workers ' +
+                'loaded the attacker module named by the polluted prototype'
+            );
+          }
+        );
+      });
+    });
+
+    it('does not replace the worker environment with a polluted Object.prototype.env', async () => {
+      // The advisory's second vector: a polluted env object that carries
+      // NODE_OPTIONS pointing at the attacker module. If the pool passes it
+      // to new Worker(), the worker thread re-parses NODE_OPTIONS from its
+      // own environment at startup and loads the module, and the worker's
+      // whole environment becomes the attacker's object.
+      await withScratchDir(async dir => {
+        writePayload(dir);
+        await withPrototypeProperty(
+          'env',
+          {
+            NODE_OPTIONS: '--require ' + path.join(dir, 'payload.cjs'),
+            [ENV_MARKER_KEY]: 'polluted',
+          },
+          async () => {
+            const pool = new Tinypool({
+              filename: envReportWorker,
+              minThreads: 1,
+              maxThreads: 1,
+            });
+            try {
+              const result = await pool.run();
+              assert.equal(
+                result.by,
+                'env-report',
+                'the env-report worker did not answer the task: ' +
+                  JSON.stringify(result)
+              );
+              assert.equal(
+                result.marker,
+                null,
+                `the worker saw ${ENV_MARKER_KEY}=${JSON.stringify(result.marker)}, ` +
+                  `so the pool passed the polluted prototype object to the ` +
+                  `worker as its environment`
+              );
+              assert.ok(
+                result.hasPath,
+                'the worker has no PATH at all, so its environment is the ' +
+                  'polluted object (which names no PATH) rather than the ' +
+                  'host environment'
+              );
+            } finally {
+              await pool.destroy();
+            }
+            assert.ok(
+              !fs.existsSync(path.join(dir, 'RCE_PROOF.txt')),
+              'the NODE_OPTIONS payload wrote its marker file, so the ' +
+                'workers re-parsed the polluted environment and loaded the ' +
+                'attacker module'
+            );
+          }
+        );
+      });
+    });
+
+    it('still honours an explicit own execArgv and env option on purpose', async () => {
+      // Negative control. A caller that owns its options object and names
+      // execArgv and env in it is the documented Worker API, not the
+      // advisory. The payload must load and the marker must appear: if it
+      // does not, an own option and a polluted one cannot be told apart,
+      // and the cases above could pass for the wrong reason.
+      await withScratchDir(async dir => {
+        writePayload(dir);
+        const pool = new Tinypool({
+          filename: envReportWorker,
+          execArgv: ['--require', path.join(dir, 'payload.cjs')],
+          env: { [ENV_MARKER_KEY]: 'own' },
+          minThreads: 1,
+          maxThreads: 1,
+        });
+        try {
+          const result = await pool.run();
+          assert.equal(
+            result.marker,
+            'own',
+            'the explicitly passed env did not reach the worker: ' +
+              JSON.stringify(result)
+          );
+        } finally {
+          await pool.destroy();
+        }
+        assert.ok(
+          fs.existsSync(path.join(dir, 'RCE_PROOF.txt')),
+          'the explicitly passed execArgv did not load the named module, ' +
+            'so an own option and a polluted one cannot be told apart'
         );
       });
     });
