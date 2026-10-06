@@ -38,7 +38,8 @@
   },
   "overrides": {
     "braces": "$braces",
-    "http-cache-semantics": "$http-cache-semantics"
+    "http-cache-semantics": "$http-cache-semantics",
+    "tinypool": "2.1.2"
   },
   "browserslist": {
     "production": [
