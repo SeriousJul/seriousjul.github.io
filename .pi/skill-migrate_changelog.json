@@ -4,13 +4,13 @@
       "version": 1,
       "migration": "create-changelog",
       "identity": "7f8cf509e1dfa3c3f3b879989c19d2fc21188889",
-      "dateTime": "2026-10-06T19:27:12.649Z"
+      "dateTime": "2026-10-06T19:27:51.563Z"
     },
     {
       "version": 2,
       "migration": "glossary-rename",
       "identity": "7f8cf509e1dfa3c3f3b879989c19d2fc21188889",
-      "dateTime": "2026-10-06T19:27:12.664Z"
+      "dateTime": "2026-10-06T19:27:51.573Z"
     }
   ]
 }
