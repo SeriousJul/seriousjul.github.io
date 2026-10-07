@@ -6,6 +6,13 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  # Keep the update-notifier -> latest-version -> got -> cacheable-request
+  # -> http-cache-semantics path out of CI runs. update-notifier disables
+  # itself when this variable is present, so the code path never runs in
+  # CI. See docs/adr/0001-no-local-patches-to-third-party-dependencies.md.
+  NO_UPDATE_NOTIFIER: "1"
+
 jobs:
   build-and-test:
     permissions:

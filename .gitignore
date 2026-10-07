@@ -1,6 +1,9 @@
 # Dependencies
 /node_modules
 
+# Third-party source is never committed (ADR-0001)
+vendor/
+
 # Production
 /build
 
