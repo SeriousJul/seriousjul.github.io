@@ -26,6 +26,7 @@ This project never patches third-party source. A local patch - changed third-par
 - Where an advisory has no upstream fix, the response is a reachability analysis, a registry pin where one exists, and **dependency replacement** when the dependency is unhealthy.
 - No `file:`, `link:`, path, git, `github:` or tarball dependency spec is allowed, and no tracked third-party source path is allowed. `tests/dependency-policy.test.mjs` fails the build if either appears. Reopening a banned shape requires a new ADR.
 - CI sets `NO_UPDATE_NOTIFIER=1` so the `update-notifier` path (the only runtime consumer of `http-cache-semantics`) never runs there. Set the same variable in your local environment for local development.
+- CI gates the committed lockfile: the `vulnerability-scan` job in `.github/workflows/ci-cd.yml` runs osv-scanner over `package-lock.json` and fails the build on any published advisory. The deploy job requires it. An explicit decision to allow an advisory is recorded in `osv-scanner.toml` at the repository root, with the reason and the analysis that stands behind it.
 
 ## Architecture
 
