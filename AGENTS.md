@@ -18,6 +18,15 @@ npm run deploy     # Deploy to gh-pages branch
 
 Node >= 20 required. Uses npm (not yarn despite README mentioning yarn).
 
+## Dependency Policy
+
+This project never patches third-party source. A local patch - changed third-party source installed in place of the registry copy - is forbidden by [ADR-0001](docs/adr/0001-no-local-patches-to-third-party-dependencies.md). The vocabulary is in [GLOSSARY.md](GLOSSARY.md).
+
+- The sanctioned way to answer an advisory is a **registry version pin**: a published registry version selected through `overrides` in `package.json`.
+- Where an advisory has no upstream fix, the response is a reachability analysis, a registry pin where one exists, and **dependency replacement** when the dependency is unhealthy.
+- No `file:`, `link:`, path, git, `github:` or tarball dependency spec is allowed, and no tracked third-party source path is allowed. `tests/dependency-policy.test.mjs` fails the build if either appears. Reopening a banned shape requires a new ADR.
+- CI sets `NO_UPDATE_NOTIFIER=1` so the `update-notifier` path (the only runtime consumer of `http-cache-semantics`) never runs there. Set the same variable in your local environment for local development.
+
 ## Architecture
 
 - **Config**: `docusaurus.config.ts` — single config file with classic preset (docs + blog + theme). Future v4 compat flag enabled. Deploys via GitHub Pages to `gh-pages` branch.
