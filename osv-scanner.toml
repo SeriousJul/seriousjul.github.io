@@ -9,3 +9,7 @@
 # Per ADR-0001, the sanctioned answers to an advisory are a registry version
 # pin in package.json, a reachability analysis, and replacement of the
 # dependency or of the code path that reaches it.
+
+[[IgnoredVulns]]
+id = "GHSA-vfj7-8cjw-p6xm"
+reason = "braces stack-exhaustion DoS (CVE-2026-93687). No upstream fix: the advisory range ends at 3.0.3, the latest published version, so there is no registry pin. Patterns reach braces only through micromatch and chokidar, both of which receive glob patterns authored in this repository's committed configuration, and no outside party can supply a pattern to this build. Analysis: docs/adr/0001-no-local-patches-to-third-party-dependencies.md."
