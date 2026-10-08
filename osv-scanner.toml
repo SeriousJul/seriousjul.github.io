@@ -1,0 +1,15 @@
+# Explicit decisions for advisories in the committed lockfile.
+#
+# The CI vulnerability gate (the osv-scanner scan of package-lock.json in
+# .github/workflows/ci-cd.yml) fails the build on every published advisory
+# unless this file records a decision to allow it. A decision is not a
+# blanket pass: it must name the advisory, state why this project does not
+# qualify for it, and point at the analysis that stands behind it.
+#
+# Per ADR-0001, the sanctioned answers to an advisory are a registry version
+# pin in package.json, a reachability analysis, and replacement of the
+# dependency or of the code path that reaches it.
+
+[[IgnoredVulns]]
+id = "GHSA-vfj7-8cjw-p6xm"
+reason = "braces stack-exhaustion DoS (CVE-2026-93687). No upstream fix: the advisory range ends at 3.0.3, the latest published version, so there is no registry pin. Patterns reach braces only through micromatch and chokidar, both of which receive glob patterns authored in this repository's committed configuration, and no outside party can supply a pattern to this build. Analysis: docs/adr/0001-no-local-patches-to-third-party-dependencies.md."
