@@ -114,6 +114,44 @@
         <category label="omarchy" term="omarchy"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Strata 0.1.45 adds picture reading and parallel serving]]></title>
+        <id>https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups</id>
+        <link href="https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups"/>
+        <updated>2026-10-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Strata v0.1.45 shipped on October 17, 2026, bringing picture reading to Qwen3.6-35B-A3B, concurrent request serving via --parallel (up to ~40% faster on tested GPUs), and opt-in switches for multi-user servers. Qwen3.8-Flash-Next answers remain byte-identical to 0.1.44.1. A r/LocalLLaMA thread also discussed Qwen3.8-Flash-Next with user reports of testing Strata.]]></summary>
+        <content type="html"><![CDATA[<p>Strata v0.1.45 shipped on October 17, 2026, bringing picture reading to Qwen3.6-35B-A3B, concurrent request serving via --parallel (up to ~40% faster on tested GPUs), and opt-in switches for multi-user servers. Qwen3.8-Flash-Next answers remain byte-identical to 0.1.44.1. A r/LocalLLaMA thread also discussed Qwen3.8-Flash-Next with user reports of testing Strata.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>v0.1.45 released (2026-10-17)</strong>: picture reading for Qwen3.6-35B-A3B, several concurrent requests at once, up to 40% faster runs on tested GPUs, switches for multi-user servers, and Mac and setup fixes. Update via <code>UPDATE.bat</code> (Linux: <code>./update.sh</code>); setup replaces the engine with 0.1.45. (<a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Picture support for Qwen3.6-35B-A3B (v0.1.45, 2026-10-17)</strong>: setup asks "Do you want images?" for Qwen3.6, downloads the pinned mmproj (~0.9 GB) and writes <code>--vision</code>; it uses the same image encoder family as Flash-Next, and output was checked against llama.cpp on the same pictures with teacher forcing. (<a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+<li class=""><strong>Concurrent requests (v0.1.45, 2026-10-17)</strong>: the server now handles several requests at once via <code>--parallel</code> (up to 8 slots per the release notes), running up to ~40% faster on the GPUs tested. (<a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+<li class=""><strong>Multi-user server switches (v0.1.45, 2026-10-17)</strong>: opt-in switches for running multi-user servers were added. (<a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Mac and setup fixes (v0.1.45, 2026-10-17)</strong>: routine Mac and setup fixes are bundled in the release. (<a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+<li class=""><strong>Identity guarantee for Qwen3.8-Flash-Next (v0.1.45, 2026-10-17)</strong>: answers of the Qwen3.8-Flash-Next models are byte-identical to 0.1.44.1 in the project's identity tests on every GPU machine tested (CUDA sm_60 / sm_86, HIP gfx1201, Intel A750, Mac M4). (<a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>r/LocalLLaMA thread on Qwen3.8-Flash-Next (2026-10-16)</strong>: the discussion thread "I don't get the qwen 3.8 flash next hype" includes user reports of testing the model with Strata, with one user saying Strata results were worse than llama.cpp on their 4x 3090 setup despite faster generation. (<a href="https://www.reddit.com/r/LocalLLaMA/comments/1x7uf15/i_dont_get_the_qwen_38_flash_next_hype/" target="_blank" rel="noopener noreferrer" class="">Source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/blog/2026-10-18-strata-strata-0145-parallel-speedups#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/Niko1221/Strata/releases/tag/v0.1.45" target="_blank" rel="noopener noreferrer" class="">https://github.com/Niko1221/Strata/releases/tag/v0.1.45</a></li>
+<li class=""><a href="https://www.reddit.com/r/LocalLLaMA/comments/1x7uf15/i_dont_get_the_qwen_38_flash_next_hype/" target="_blank" rel="noopener noreferrer" class="">https://www.reddit.com/r/LocalLLaMA/comments/1x7uf15/i_dont_get_the_qwen_38_flash_next_hype/</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="project" term="project"/>
+        <category label="strata" term="strata"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://seriousjul.github.io/blog/welcome</id>
         <link href="https://seriousjul.github.io/blog/welcome"/>
