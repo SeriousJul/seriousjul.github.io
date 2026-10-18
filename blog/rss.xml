@@ -9,6 +9,35 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
+            <title><![CDATA[Egui 0.37.0 lands colored emoji support]]></title>
+            <link>https://seriousjul.github.io/blog/2026-10-18-egui-egui-0370-emoji-release</link>
+            <guid>https://seriousjul.github.io/blog/2026-10-18-egui-egui-0370-emoji-release</guid>
+            <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Egui 0.37.0, titled "Colored emojis!", was released on 2026-10-15 and is the first release to ship full emoji and glyph support via a new glyph rasterizer and font provider API. The same release adds a CompletionPopup autocomplete widget and an experimental theme plugin system, alongside improved AccessKit accessibility, video recording of integration tests, and breaking changes for API users.]]></description>
+            <content:encoded><![CDATA[<p>Egui 0.37.0, titled "Colored emojis!", was released on 2026-10-15 and is the first release to ship full emoji and glyph support via a new glyph rasterizer and font provider API. The same release adds a CompletionPopup autocomplete widget and an experimental theme plugin system, alongside improved AccessKit accessibility, video recording of integration tests, and breaking changes for API users.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/blog/2026-10-18-egui-egui-0370-emoji-release#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">On 2026-10-15, egui released stable version 0.37.0 ("Colored emojis!") featuring full emoji and glyph support through a new glyph rasterizer/font provider API, a CompletionPopup autocomplete widget, an experimental theme plugin system, improved AccessKit accessibility, and video recording of integration tests (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/blog/2026-10-18-egui-egui-0370-emoji-release#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">Full colored emoji and glyph support via a new glyph rasterizer and font provider API, introduced in 0.37.0 on 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">New CompletionPopup autocomplete widget in 0.37.0, released 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">Experimental theme plugin system shipped in 0.37.0 on 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">Improved accessibility through AccessKit and video recording of integration tests, both in 0.37.0 on 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/blog/2026-10-18-egui-egui-0370-emoji-release#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">Breaking changes in 0.37.0 (2026-10-15): the AsId trait was removed and default_fonts was dropped from the default feature set (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/blog/2026-10-18-egui-egui-0370-emoji-release#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
+</ul>]]></content:encoded>
+            <category>project</category>
+            <category>egui</category>
+        </item>
+        <item>
             <title><![CDATA[n8n 2.43.7 stable lands execution suspension as ZoomInfo ships native node]]></title>
             <link>https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration</link>
             <guid>https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration</guid>
