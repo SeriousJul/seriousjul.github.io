@@ -2,54 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://seriousjul.github.io/blog</id>
     <title>SeriousJul Blog</title>
-    <updated>2026-10-18T00:00:00.000Z</updated>
+    <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://seriousjul.github.io/blog"/>
     <subtitle>SeriousJul Blog</subtitle>
     <icon>https://seriousjul.github.io/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[Toolchain 5.0 lands with breaking schema changes and plugin marketplace preview]]></title>
-        <id>https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release</id>
-        <link href="https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release"/>
-        <updated>2026-10-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Toolchain shipped major release v5.0.0 on 2025-03-12, introducing a breaking change to the config schema and reducing cold-start time by roughly 40%. It was quickly followed by v5.0.1 on 2025-03-14, which fixed a high-severity security issue (CVE-2025-99887) in the plugin loader. A preview of the new plugin marketplace also went live during the window.]]></summary>
-        <content type="html"><![CDATA[<p>Toolchain shipped major release v5.0.0 on 2025-03-12, introducing a breaking change to the config schema and reducing cold-start time by roughly 40%. It was quickly followed by v5.0.1 on 2025-03-14, which fixed a high-severity security issue (CVE-2025-99887) in the plugin loader. A preview of the new plugin marketplace also went live during the window.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class="">v5.0.0 was released on 2025-03-12. It introduces a breaking change to the config schema (old <code>plugins</code> list becomes a <code>plugins:</code> map) and cuts cold-start time by about 40%. Migration instructions are in the release notes. See <a href="https://github.com/acme/toolchain/releases/tag/v5.0.0" target="_blank" rel="noopener noreferrer" class="">GitHub release</a>.</li>
-<li class="">v5.0.1 was released on 2025-03-14 to patch the plugin-loader vulnerability; upgrading is strongly recommended. See <a href="https://github.com/acme/toolchain/releases/tag/v5.0.1" target="_blank" rel="noopener noreferrer" class="">GitHub release</a>.</li>
-<li class="">v4.3.2 was released on 2025-03-10 as a patch for the last 4.x line, fixing a rare infinite retry loop in the build cache. See <a href="https://github.com/acme/toolchain/releases/tag/v4.3.2" target="_blank" rel="noopener noreferrer" class="">GitHub release</a>.</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
-<ul>
-<li class="">A preview of the plugin marketplace was published on 2025-03-13. It lets teams browse, pin, and share internal plugins, and is disabled by default until a <code>marketplace:</code> config block is added. See <a href="https://toolchain.dev/docs/plugins-preview" target="_blank" rel="noopener noreferrer" class="">docs preview</a>.</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
-<ul>
-<li class="">The security fix in v5.0.1 addresses CVE-2025-99887, a path traversal in the plugin loader rated high severity (7.2 CVSS). Details are in the <a href="https://github.com/acme/toolchain/security/advisories/GHSA-2025-99887" target="_blank" rel="noopener noreferrer" class="">security advisory</a>.</li>
-<li class="">A new migration guide for upgrading from v4 to v5 was published on 2025-03-11, covering config changes and CLI flags that were removed. See <a href="https://toolchain.dev/docs/migration-5" target="_blank" rel="noopener noreferrer" class="">migration guide</a>.</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
-<ul>
-<li class="">The monthly newsletter (#42) was published on 2025-03-14, covering the plugin marketplace launch, a call for community plugin authors, and a 2025 roadmap Q&amp;A. See <a href="https://toolchain.dev/newsletter/2025-03" target="_blank" rel="noopener noreferrer" class="">newsletter</a>.</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-toolchain-5-0-breaking-release#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://github.com/acme/toolchain/releases/tag/v5.0.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/acme/toolchain/releases/tag/v5.0.0</a></li>
-<li class=""><a href="https://github.com/acme/toolchain/releases/tag/v5.0.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/acme/toolchain/releases/tag/v5.0.1</a></li>
-<li class=""><a href="https://github.com/acme/toolchain/releases/tag/v4.3.2" target="_blank" rel="noopener noreferrer" class="">https://github.com/acme/toolchain/releases/tag/v4.3.2</a></li>
-<li class=""><a href="https://toolchain.dev/docs/plugins-preview" target="_blank" rel="noopener noreferrer" class="">https://toolchain.dev/docs/plugins-preview</a></li>
-<li class=""><a href="https://toolchain.dev/docs/migration-5" target="_blank" rel="noopener noreferrer" class="">https://toolchain.dev/docs/migration-5</a></li>
-<li class=""><a href="https://github.com/acme/toolchain/security/advisories/GHSA-2025-99887" target="_blank" rel="noopener noreferrer" class="">https://github.com/acme/toolchain/security/advisories/GHSA-2025-99887</a></li>
-<li class=""><a href="https://toolchain.dev/newsletter/2025-03" target="_blank" rel="noopener noreferrer" class="">https://toolchain.dev/newsletter/2025-03</a></li>
-</ul>]]></content>
-        <author>
-            <name>Julien Antony</name>
-            <uri>https://seriousjul.github.io</uri>
-        </author>
-        <category label="project" term="project"/>
-        <category label="omarchy" term="omarchy"/>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://seriousjul.github.io/blog/welcome</id>
