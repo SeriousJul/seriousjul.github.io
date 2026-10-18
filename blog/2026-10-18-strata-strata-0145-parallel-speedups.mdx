@@ -1,0 +1,27 @@
+---
+title: "Strata 0.1.45 adds picture reading and parallel serving"
+authors: [seriousjul]
+tags: [project, strata]
+slug: 2026-10-18-strata-strata-0145-parallel-speedups
+---
+
+Strata v0.1.45 shipped on October 17, 2026, bringing picture reading to Qwen3.6-35B-A3B, concurrent request serving via --parallel (up to ~40% faster on tested GPUs), and opt-in switches for multi-user servers. Qwen3.8-Flash-Next answers remain byte-identical to 0.1.44.1. A r/LocalLLaMA thread also discussed Qwen3.8-Flash-Next with user reports of testing Strata.
+
+## Releases
+- **v0.1.45 released (2026-10-17)**: picture reading for Qwen3.6-35B-A3B, several concurrent requests at once, up to 40% faster runs on tested GPUs, switches for multi-user servers, and Mac and setup fixes. Update via `UPDATE.bat` (Linux: `./update.sh`); setup replaces the engine with 0.1.45. ([Source](https://github.com/Niko1221/Strata/releases/tag/v0.1.45))
+
+## Features
+- **Picture support for Qwen3.6-35B-A3B (v0.1.45, 2026-10-17)**: setup asks "Do you want images?" for Qwen3.6, downloads the pinned mmproj (~0.9 GB) and writes `--vision`; it uses the same image encoder family as Flash-Next, and output was checked against llama.cpp on the same pictures with teacher forcing. ([Source](https://github.com/Niko1221/Strata/releases/tag/v0.1.45))
+- **Concurrent requests (v0.1.45, 2026-10-17)**: the server now handles several requests at once via `--parallel` (up to 8 slots per the release notes), running up to ~40% faster on the GPUs tested. ([Source](https://github.com/Niko1221/Strata/releases/tag/v0.1.45))
+- **Multi-user server switches (v0.1.45, 2026-10-17)**: opt-in switches for running multi-user servers were added. ([Source](https://github.com/Niko1221/Strata/releases/tag/v0.1.45))
+
+## Fixes and other
+- **Mac and setup fixes (v0.1.45, 2026-10-17)**: routine Mac and setup fixes are bundled in the release. ([Source](https://github.com/Niko1221/Strata/releases/tag/v0.1.45))
+- **Identity guarantee for Qwen3.8-Flash-Next (v0.1.45, 2026-10-17)**: answers of the Qwen3.8-Flash-Next models are byte-identical to 0.1.44.1 in the project's identity tests on every GPU machine tested (CUDA sm_60 / sm_86, HIP gfx1201, Intel A750, Mac M4). ([Source](https://github.com/Niko1221/Strata/releases/tag/v0.1.45))
+
+## Community
+- **r/LocalLLaMA thread on Qwen3.8-Flash-Next (2026-10-16)**: the discussion thread "I don't get the qwen 3.8 flash next hype" includes user reports of testing the model with Strata, with one user saying Strata results were worse than llama.cpp on their 4x 3090 setup despite faster generation. ([Source](https://www.reddit.com/r/LocalLLaMA/comments/1x7uf15/i_dont_get_the_qwen_38_flash_next_hype/))
+
+## Sources
+- https://github.com/Niko1221/Strata/releases/tag/v0.1.45
+- https://www.reddit.com/r/LocalLLaMA/comments/1x7uf15/i_dont_get_the_qwen_38_flash_next_hype/
