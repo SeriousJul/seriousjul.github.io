@@ -4,10 +4,44 @@
         <title>SeriousJul Blog</title>
         <link>https://seriousjul.github.io/blog</link>
         <description>SeriousJul Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 18 Oct 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[n8n 2.43.7 stable lands execution suspension as ZoomInfo ships native node]]></title>
+            <link>https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration</link>
+            <guid>https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration</guid>
+            <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[n8n shipped four releases between Oct 14 and Oct 16, led by stable 2.43.7, which can now suspend in-flight production executions when a worker shuts down. The biggest ecosystem news came from ZoomInfo, which launched a verified native n8n node exposing its GTM Context Graph for workflows and AI agents.]]></description>
+            <content:encoded><![CDATA[<p>n8n shipped four releases between Oct 14 and Oct 16, led by stable 2.43.7, which can now suspend in-flight production executions when a worker shuts down. The biggest ecosystem news came from ZoomInfo, which launched a verified native n8n node exposing its GTM Context Graph for workflows and AI agents.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">2026-10-16: n8n 2.43.7 (latest stable) released, adding the ability to suspend in-flight production executions at worker shutdown in core. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.7" target="_blank" rel="noopener noreferrer" class="">Release</a></li>
+<li class="">2026-10-15: n8n 2.43.6 released with a core fix creating a fresh XML parser for each webhook request body. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6" target="_blank" rel="noopener noreferrer" class="">Release</a></li>
+<li class="">2026-10-14: n8n 2.43.5 released, showing Gemini models by name and listing prioritized models first in model pickers. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5" target="_blank" rel="noopener noreferrer" class="">Release</a></li>
+<li class="">2026-10-14: n8n 1.123.85, a routine maintenance release for the legacy 1.x branch with no notable changes listed. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.85" target="_blank" rel="noopener noreferrer" class="">Release</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">2026-10-12: ZoomInfo announced a native, verified ZoomInfo node inside n8n, built and maintained by ZoomInfo. Once a workflow authenticates with a customer's own ZoomInfo credentials, it can search contacts and companies, enrich records, and monitor buying-signal and intent data from ZoomInfo's GTM Context Graph via GTM.AI. <a href="https://ir.zoominfo.com/news-releases/news-release-details/zoominfo-launches-native-integration-n8n-through-gtmai/" target="_blank" rel="noopener noreferrer" class="">Announcement</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">2026-10-15: Webhook XML parsing fixed in 2.43.6 by creating a fresh XML parser for each request body. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6" target="_blank" rel="noopener noreferrer" class="">Release</a></li>
+<li class="">2026-10-14: chunk() expression extension now validates its size argument, shipped in 2.43.5. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5" target="_blank" rel="noopener noreferrer" class="">Release</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/blog/2026-10-18-n8n-n8n-2-43-7-zoominfo-integration#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.7</a></li>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6</a></li>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5</a></li>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.85" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.85</a></li>
+<li class=""><a href="https://ir.zoominfo.com/news-releases/news-release-details/zoominfo-launches-native-integration-n8n-through-gtmai/" target="_blank" rel="noopener noreferrer" class="">https://ir.zoominfo.com/news-releases/news-release-details/zoominfo-launches-native-integration-n8n-through-gtmai/</a></li>
+</ul>]]></content:encoded>
+            <category>project</category>
+            <category>n8n</category>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://seriousjul.github.io/blog/welcome</link>
