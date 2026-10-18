@@ -1,0 +1,32 @@
+---
+title: "n8n 2.43.7 stable lands execution suspension as ZoomInfo ships native node"
+authors: [seriousjul]
+tags: [project, n8n]
+slug: 2026-10-18-n8n-n8n-2-43-7-zoominfo-integration
+---
+
+n8n shipped four releases between Oct 14 and Oct 16, led by stable 2.43.7, which can now suspend in-flight production executions when a worker shuts down. The biggest ecosystem news came from ZoomInfo, which launched a verified native n8n node exposing its GTM Context Graph for workflows and AI agents.
+
+## Releases
+
+- 2026-10-16: n8n 2.43.7 (latest stable) released, adding the ability to suspend in-flight production executions at worker shutdown in core. [Release](https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.7)
+- 2026-10-15: n8n 2.43.6 released with a core fix creating a fresh XML parser for each webhook request body. [Release](https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6)
+- 2026-10-14: n8n 2.43.5 released, showing Gemini models by name and listing prioritized models first in model pickers. [Release](https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5)
+- 2026-10-14: n8n 1.123.85, a routine maintenance release for the legacy 1.x branch with no notable changes listed. [Release](https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.85)
+
+## Features
+
+- 2026-10-12: ZoomInfo announced a native, verified ZoomInfo node inside n8n, built and maintained by ZoomInfo. Once a workflow authenticates with a customer's own ZoomInfo credentials, it can search contacts and companies, enrich records, and monitor buying-signal and intent data from ZoomInfo's GTM Context Graph via GTM.AI. [Announcement](https://ir.zoominfo.com/news-releases/news-release-details/zoominfo-launches-native-integration-n8n-through-gtmai/)
+
+## Fixes and other
+
+- 2026-10-15: Webhook XML parsing fixed in 2.43.6 by creating a fresh XML parser for each request body. [Release](https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6)
+- 2026-10-14: chunk() expression extension now validates its size argument, shipped in 2.43.5. [Release](https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5)
+
+## Sources
+
+- https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.7
+- https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.6
+- https://github.com/n8n-io/n8n/releases/tag/n8n%402.43.5
+- https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.85
+- https://ir.zoominfo.com/news-releases/news-release-details/zoominfo-launches-native-integration-n8n-through-gtmai/
