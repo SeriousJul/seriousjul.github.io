@@ -23,3 +23,12 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+seriousjul:
+  name: Julien Antony
+  title: Systems tinkerer
+  url: https://seriousjul.github.io
+  image_url: https://github.com/seriousjul.png
+  page: true
+  socials:
+    github: seriousjul
