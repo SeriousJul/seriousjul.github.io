@@ -79,6 +79,41 @@
         <category label="n8n" term="n8n"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Omarchy 4.0.5 ships Qt 6.12 and BORE-scheduler kernel]]></title>
+        <id>https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release</id>
+        <link href="https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release"/>
+        <updated>2026-10-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Omarchy 4.0.5 was released on 18 October 2026 as a stable point release bringing fixes and refinements ahead of the next feature release. The update moves the distro onto the Qt 6.12 toolkit, bumps stable-ring packages, and ships an updated Linux 7.2 stable kernel with the BORE scheduler. Phoronix also covered the release, highlighting millisecond-level optimization of web browser launch by avoiding XDG overhead.]]></summary>
+        <content type="html"><![CDATA[<p>Omarchy 4.0.5 was released on 18 October 2026 as a stable point release bringing fixes and refinements ahead of the next feature release. The update moves the distro onto the Qt 6.12 toolkit, bumps stable-ring packages, and ships an updated Linux 7.2 stable kernel with the BORE scheduler. Phoronix also covered the release, highlighting millisecond-level optimization of web browser launch by avoiding XDG overhead.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v4.0.5 (stable) released on 18 Oct 2026, with a set of fixes and refinements, a move to Qt 6.12, stable-ring package bumps, and an updated kernel with the BORE scheduler; existing machines can upgrade via Update &gt; Omarchy and new installs use the 4.0.5 ISO (<a href="https://github.com/omacom/omarchy/releases/tag/v4.0.5" target="_blank" rel="noopener noreferrer" class="">GitHub release</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">Faster default web browser launch via millisecond-level optimization that avoids the xdg-settings get default-web-browser overhead, as reported on the 4.0.5 release (18 Oct 2026) (<a href="https://www.phoronix.com/news/Omarchy-Faster-Web-Browser" target="_blank" rel="noopener noreferrer" class="">Phoronix</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">Improved reliability of Wi-Fi QR code generation among other fixes in v4.0.5 (18 Oct 2026) (<a href="https://github.com/omacom/omarchy/releases/tag/v4.0.5" target="_blank" rel="noopener noreferrer" class="">GitHub release</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">Phoronix (Michael Larabel) covered the 4.0.5 release on 18 Oct 2026, noting it pulls in the Linux 7.2 stable kernel with BORE scheduler and Qt 6.12 updates alongside smaller improvements (<a href="https://www.phoronix.com/news/Omarchy-Faster-Web-Browser" target="_blank" rel="noopener noreferrer" class="">Phoronix</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/blog/2026-10-18-omarchy-omarchy-4-0-5-release#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/omacom/omarchy/releases/tag/v4.0.5" target="_blank" rel="noopener noreferrer" class="">https://github.com/omacom/omarchy/releases/tag/v4.0.5</a></li>
+<li class=""><a href="https://www.phoronix.com/news/Omarchy-Faster-Web-Browser" target="_blank" rel="noopener noreferrer" class="">https://www.phoronix.com/news/Omarchy-Faster-Web-Browser</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="project" term="project"/>
+        <category label="omarchy" term="omarchy"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://seriousjul.github.io/blog/welcome</id>
         <link href="https://seriousjul.github.io/blog/welcome"/>
