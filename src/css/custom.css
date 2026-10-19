@@ -1,30 +1,124 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * seriousjul theme
+ *
+ * Wine (#9f1239) in both modes: on deep slate in dark mode, on paper in
+ * light mode. The same wine carries links, buttons, and accents, so the
+ * accent never changes when you flip the mode.
+ *
+ * Square corners: --ifm-global-radius is 0, which squares every Infima
+ * component (buttons, cards, code blocks, alerts, badges, pagination).
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Wine scale, shared by both modes. */
+  --sj-wine: #9f1239;
+  --sj-wine-dark: #8a0f31;
+  --sj-wine-darker: #7d0d2c;
+  --sj-wine-darkest: #660b24;
+  --sj-wine-light: #b0254d;
+  --sj-wine-lighter: #b8325a;
+  --sj-wine-lightest: #cc5c7d;
+
+  --ifm-color-primary: var(--sj-wine);
+  --ifm-color-primary-dark: var(--sj-wine-dark);
+  --ifm-color-primary-darker: var(--sj-wine-darker);
+  --ifm-color-primary-darkest: var(--sj-wine-darkest);
+  --ifm-color-primary-light: var(--sj-wine-light);
+  --ifm-color-primary-lighter: var(--sj-wine-lighter);
+  --ifm-color-primary-lightest: var(--sj-wine-lightest);
+  --ifm-color-primary-contrast-background: #fbe8ed;
+  --ifm-color-primary-contrast-foreground: #5a0a1f;
+  --ifm-color-primary-foreground: #ffffff;
+  --ifm-color-secondary-foreground: #ffffff;
+
+  /* Square corners. */
+  --ifm-global-radius: 0;
+  --ifm-breadcrumb-border-radius: 0;
+
+  /* Light mode: wine on paper. */
+  --ifm-color-gray-0: #ffffff;
+  --ifm-color-gray-100: #f6f8fa;
+  --ifm-color-gray-200: #e8ebee;
+  --ifm-color-gray-300: #d0d7de;
+  --ifm-color-gray-400: #c2c8d0;
+  --ifm-color-gray-500: #9aa1ab;
+  --ifm-color-gray-600: #8b949e;
+  --ifm-color-gray-700: #57606a;
+  --ifm-color-gray-800: #3d444d;
+  --ifm-color-gray-900: #1a2027;
+  --ifm-color-gray-1000: #0d1117;
+
+  --ifm-color-secondary: #57606a;
+  --ifm-color-secondary-dark: #4d545d;
+  --ifm-color-secondary-darker: #454b53;
+  --ifm-color-secondary-darkest: #33383f;
+  --ifm-color-secondary-light: #616a74;
+  --ifm-color-secondary-lighter: #6b747e;
+  --ifm-color-secondary-lightest: #7d8590;
+
+  --ifm-color-content: #1a2027;
+  --ifm-color-content-inverse: #ffffff;
+  --ifm-color-content-secondary: #57606a;
+  --ifm-background-color: #f6f8fa;
+  --ifm-background-surface-color: #ffffff;
+
+  --ifm-link-color: var(--sj-wine);
+  --ifm-link-hover-color: #7c0f2e;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Solid primary buttons keep white text in both modes: wine + white is
+   8.0:1 in light and dark alike. */
+:where(.button--primary):not(.button--outline) {
+  --ifm-button-color: #ffffff;
+  --ifm-color-primary-foreground: #ffffff;
+}
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Dark mode: wine on deep slate. Redefining the gray scale re-points
+     every --ifm-color-emphasis-* alias, which drives borders, dividers,
+     and muted surfaces. */
+  --ifm-color-gray-0: #10151b;
+  --ifm-color-gray-100: #0d1117;
+  --ifm-color-gray-200: #161b22;
+  --ifm-color-gray-300: #2d333b;
+  --ifm-color-gray-400: #3d444d;
+  --ifm-color-gray-500: #545d68;
+  --ifm-color-gray-600: #6e7681;
+  --ifm-color-gray-700: #8b949e;
+  --ifm-color-gray-800: #adbac7;
+  --ifm-color-gray-900: #e6edf3;
+  --ifm-color-gray-1000: #ffffff;
+
+  --ifm-color-secondary: #8b949e;
+  --ifm-color-secondary-dark: #7d8590;
+  --ifm-color-secondary-darker: #767e89;
+  --ifm-color-secondary-darkest: #6e7681;
+  --ifm-color-secondary-light: #969ea9;
+  --ifm-color-secondary-lighter: #9da6b1;
+  --ifm-color-secondary-lightest: #adbac7;
+  --ifm-color-secondary-foreground: #1a2027;
+
+  --ifm-color-content: #e6edf3;
+  --ifm-color-content-inverse: #10151b;
+  --ifm-color-content-secondary: #8b949e;
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+
+  --ifm-hover-overlay: rgba(255, 255, 255, 0.06);
+  --ifm-color-primary-contrast-background: #341019;
+  --ifm-color-primary-contrast-foreground: #e8a7bb;
+
+  /* Wine text on slate is only 2.4:1, so links and active navigation use
+     a lighter wine step. 6.2:1 on the page background. */
+  --ifm-link-color: #f06292;
+  --ifm-link-hover-color: #ff7fae;
+
+  --ifm-scrollbar-track-background-color: #0d1117;
+  --ifm-scrollbar-thumb-background-color: #3d444d;
+  --ifm-scrollbar-thumb-hover-background-color: #545d68;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
