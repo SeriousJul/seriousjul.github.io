@@ -10,8 +10,6 @@ import styles from './index.module.css';
 const LINKS = [
   {to: '/blog', label: 'Blog'},
   {to: '/resume', label: 'Resume'},
-  {to: '/sudoku', label: 'Sudoku'},
-  {to: '/snake', label: 'Snake'},
 ] as const;
 
 function Home(): ReactNode {

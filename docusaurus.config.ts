@@ -82,22 +82,7 @@ const config: Config = {
       },
       items: [
         {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          type: 'dropdown',
-          label: 'Sudoku',
-          position: 'left',
-          items: [
-            { to: '/sudoku', label: 'Sudoku 1' },
-            { to: '/sudoku2', label: 'Sudoku 2' },
-            { to: '/sudoku3', label: 'Sudoku 3' },
-            { to: '/sudoku4', label: 'Sudoku 4×4' },
-            { to: '/sudoku5', label: 'Sudoku 5' },
-            { to: '/sudoku6', label: 'Sudoku 6' },
-            { to: '/sudoku7', label: 'Sudoku 7' },
-          ],
-        },
         {to: '/resume', label: 'Resume', position: 'left'},
-        {to: '/snake', label: 'Snake', position: 'left'},
         {
           href: 'https://www.linkedin.com/in/antonyjulien',
           label: 'LinkedIn',
