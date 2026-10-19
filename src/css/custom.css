@@ -1,23 +1,29 @@
 /**
  * seriousjul theme
  *
- * Wine (#9f1239) in both modes: on deep slate in dark mode, on paper in
- * light mode. The same wine carries links, buttons, and accents, so the
- * accent never changes when you flip the mode.
+ * Light wine (#f06292) is the accent in both modes: on deep slate in dark
+ * mode, on paper in light mode. Buttons, logo, and active states keep
+ * #f06292 as fill everywhere, with near-black text on the fill (6.3:1).
+ * Link text uses a deeper pink step (#bd2455) in light mode, because
+ * #f06292 on paper is only 2.9:1; in dark mode links use #f06292
+ * (6.2:1 on slate).
  *
  * Square corners: --ifm-global-radius is 0, which squares every Infima
  * component (buttons, cards, code blocks, alerts, badges, pagination).
  */
 
 :root {
-  /* Wine scale, shared by both modes. */
-  --sj-wine: #9f1239;
-  --sj-wine-dark: #8a0f31;
-  --sj-wine-darker: #7d0d2c;
-  --sj-wine-darkest: #660b24;
-  --sj-wine-light: #b0254d;
-  --sj-wine-lighter: #b8325a;
-  --sj-wine-lightest: #cc5c7d;
+  /* Light wine accent scale, shared by both modes. */
+  --sj-wine: #f06292;
+  --sj-wine-dark: #d94f85;
+  --sj-wine-darker: #c94276;
+  --sj-wine-darkest: #a83560;
+  --sj-wine-light: #f47fab;
+  --sj-wine-lighter: #f68cb4;
+  --sj-wine-lightest: #f9a8c5;
+  /* Deeper step, for accent text on paper. */
+  --sj-wine-deep: #bd2455;
+  --sj-wine-deeper: #a11d47;
 
   --ifm-color-primary: var(--sj-wine);
   --ifm-color-primary-dark: var(--sj-wine-dark);
@@ -26,9 +32,9 @@
   --ifm-color-primary-light: var(--sj-wine-light);
   --ifm-color-primary-lighter: var(--sj-wine-lighter);
   --ifm-color-primary-lightest: var(--sj-wine-lightest);
-  --ifm-color-primary-contrast-background: #fbe8ed;
-  --ifm-color-primary-contrast-foreground: #5a0a1f;
-  --ifm-color-primary-foreground: #ffffff;
+  --ifm-color-primary-contrast-background: #fdeef4;
+  --ifm-color-primary-contrast-foreground: #7c1240;
+  --ifm-color-primary-foreground: #14040b;
   --ifm-color-secondary-foreground: #ffffff;
 
   /* Square corners. */
@@ -62,18 +68,18 @@
   --ifm-background-color: #f6f8fa;
   --ifm-background-surface-color: #ffffff;
 
-  --ifm-link-color: var(--sj-wine);
-  --ifm-link-hover-color: #7c0f2e;
+  --ifm-link-color: var(--sj-wine-deep);
+  --ifm-link-hover-color: var(--sj-wine-deeper);
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* Solid primary buttons keep white text in both modes: wine + white is
-   8.0:1 in light and dark alike. */
+/* Primary buttons: near-black text on the light wine fill, both modes
+   (6.3:1). */
 :where(.button--primary):not(.button--outline) {
-  --ifm-button-color: #ffffff;
-  --ifm-color-primary-foreground: #ffffff;
+  --ifm-button-color: #14040b;
+  --ifm-color-primary-foreground: #14040b;
 }
 
 [data-theme='dark'] {
@@ -108,12 +114,11 @@
   --ifm-background-surface-color: #161b22;
 
   --ifm-hover-overlay: rgba(255, 255, 255, 0.06);
-  --ifm-color-primary-contrast-background: #341019;
-  --ifm-color-primary-contrast-foreground: #e8a7bb;
+  --ifm-color-primary-contrast-background: #2b1220;
+  --ifm-color-primary-contrast-foreground: #f2b1cb;
 
-  /* Wine text on slate is only 2.4:1, so links and active navigation use
-     a lighter wine step. 6.2:1 on the page background. */
-  --ifm-link-color: #f06292;
+  /* In dark mode the accent itself reads fine as text on slate: 6.2:1. */
+  --ifm-link-color: var(--sj-wine);
   --ifm-link-hover-color: #ff7fae;
 
   --ifm-scrollbar-track-background-color: #0d1117;
