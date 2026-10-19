@@ -110,8 +110,8 @@
 }
 
 .skillBadge {
-  background: var(--ifm-color-primary-lightest);
-  color: var(--ifm-font-color-base);
+  background: var(--sj-brand-soft, rgba(100, 108, 255, 0.14));
+  color: var(--ifm-color-primary);
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
   font-size: 0.8rem;
@@ -119,7 +119,7 @@
 }
 
 [data-theme='dark'] .skillBadge {
-  background: rgba(240, 98, 146, 0.25);
+  color: #a8b1ff;
 }
 
 .summaryList {
@@ -218,7 +218,7 @@
 
 .keyword {
   background: var(--ifm-color-primary);
-  color: #14040b;
+  color: #fff;
   padding: 0.1rem 0.4rem;
   border-radius: 2px;
   font-size: 0.75rem;
