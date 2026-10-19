@@ -22,6 +22,9 @@
   /* Soft tint, the factory's --vp-c-indigo-soft. */
   --sj-brand-soft: rgba(100, 108, 255, 0.14);
 
+  /* One lift for every floating surface: navbar, cards, resume sheets. */
+  --sj-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
   --ifm-color-primary: var(--sj-brand);
   --ifm-color-primary-dark: var(--sj-brand-dark);
   --ifm-color-primary-darker: var(--sj-brand-darker);
@@ -67,7 +70,7 @@
   /* The header steps off the body: the factory's alt tone, plus a firm
      shadow, because Infima draws the navbar edge as a shadow. */
   --ifm-navbar-background-color: #f6f6f7;
-  --ifm-navbar-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --ifm-navbar-shadow: var(--sj-shadow);
 
   --ifm-link-color: var(--sj-brand);
   --ifm-link-hover-color: #3a5ccc;
@@ -80,6 +83,11 @@
 :where(.button--primary):not(.button--outline) {
   --ifm-button-color: #ffffff;
   --ifm-color-primary-foreground: #ffffff;
+}
+
+/* Cards lift with the same shadow as the navbar. */
+.card {
+  box-shadow: var(--sj-shadow);
 }
 
 [data-theme='dark'] {
@@ -98,6 +106,8 @@
   --ifm-color-gray-900: #1b1b1f;
   --ifm-color-gray-1000: #161618;
 
+  --sj-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+
   --ifm-color-secondary: #98989f;
   --ifm-color-secondary-dark: #8b8b92;
   --ifm-color-secondary-darker: #828289;
@@ -115,7 +125,7 @@
   /* The header steps off the body: the factory's elevated tone, plus a
      firm shadow. */
   --ifm-navbar-background-color: #202127;
-  --ifm-navbar-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  --ifm-navbar-shadow: var(--sj-shadow);
 
   --ifm-hover-overlay: rgba(255, 255, 255, 0.06);
 
