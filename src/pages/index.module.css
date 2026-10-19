@@ -1,26 +1,36 @@
-.header {
-  padding: 4rem 0 3rem;
+.hero {
+  padding: 4rem 0 4.5rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .title {
   font-size: 2.75rem;
   line-height: 1.1;
+  margin-top: 1.25rem;
 }
 
 .tagline {
-  margin-top: 0.75rem;
-  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
   color: var(--ifm-color-secondary);
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
+  justify-content: center;
+  gap: 0.75rem 2rem;
   margin-top: 2rem;
 }
 
 .link {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }

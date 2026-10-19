@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'SeriousJul',
-  tagline: 'Personal Website and Blog',
+  tagline: 'Systems tinkerer',
   favicon: 'img/seriousjul.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
