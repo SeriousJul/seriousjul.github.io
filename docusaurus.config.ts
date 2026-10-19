@@ -49,6 +49,8 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          // The blog is the News section.
+          routeBasePath: 'news',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -81,7 +83,7 @@ const config: Config = {
         src: 'img/seriousjul.png',
       },
       items: [
-        {to: '/blog', label: 'News', position: 'left'},
+        {to: '/news', label: 'News', position: 'left'},
         {to: '/resume', label: 'Resume', position: 'left'},
         {
           href: 'https://seriousjul.github.io/my-little-software-factory/',
