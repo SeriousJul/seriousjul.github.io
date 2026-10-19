@@ -81,7 +81,7 @@ const config: Config = {
         src: 'img/seriousjul.png',
       },
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: 'FOSS News', position: 'left'},
         {to: '/resume', label: 'Resume', position: 'left'},
         {
           href: 'https://seriousjul.github.io/my-little-software-factory/',

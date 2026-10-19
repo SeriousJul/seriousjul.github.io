@@ -8,7 +8,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
 const INTERNAL_LINKS = [
-  {to: '/blog', label: 'Blog'},
+  {to: '/blog', label: 'FOSS News'},
   {to: '/resume', label: 'Resume'},
 ] as const;
 
