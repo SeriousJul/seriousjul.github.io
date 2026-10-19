@@ -84,6 +84,16 @@ const config: Config = {
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/resume', label: 'Resume', position: 'left'},
         {
+          href: 'https://seriousjul.github.io/my-little-software-factory/',
+          label: 'Software Factory',
+          position: 'right',
+        },
+        {
+          href: 'https://seriousjul.github.io/pi-extensions/',
+          label: 'Pi Extensions',
+          position: 'right',
+        },
+        {
           href: 'https://www.linkedin.com/in/antonyjulien',
           label: 'LinkedIn',
           position: 'right',
