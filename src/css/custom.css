@@ -64,7 +64,10 @@
   --ifm-color-content-secondary: #67676c;
   --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #ffffff;
-  --ifm-navbar-background-color: #ffffff;
+  /* The header steps off the body: the factory's alt tone, plus a firm
+     shadow, because Infima draws the navbar edge as a shadow. */
+  --ifm-navbar-background-color: #f6f6f7;
+  --ifm-navbar-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 
   --ifm-link-color: var(--sj-brand);
   --ifm-link-hover-color: #3a5ccc;
@@ -109,7 +112,10 @@
   --ifm-color-content-secondary: #6a6a71;
   --ifm-background-color: #1b1b1f;
   --ifm-background-surface-color: #202127;
-  --ifm-navbar-background-color: #1b1b1f;
+  /* The header steps off the body: the factory's elevated tone, plus a
+     firm shadow. */
+  --ifm-navbar-background-color: #202127;
+  --ifm-navbar-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 
   --ifm-hover-overlay: rgba(255, 255, 255, 0.06);
 
