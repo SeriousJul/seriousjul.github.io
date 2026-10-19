@@ -1,11 +1,7 @@
 .viewer {
   min-height: 100vh;
-  background: #e8e8e8;
+  background: var(--ifm-background-color);
   padding: 2rem 1rem;
-}
-
-[data-theme='dark'] .viewer {
-  background: #0a0a0a;
 }
 
 .pages {
@@ -123,7 +119,7 @@
 }
 
 [data-theme='dark'] .skillBadge {
-  background: rgba(37, 194, 160, 0.25);
+  background: rgba(240, 98, 146, 0.25);
 }
 
 .summaryList {
@@ -222,16 +218,11 @@
 
 .keyword {
   background: var(--ifm-color-primary);
-  color: #fff;
+  color: #14040b;
   padding: 0.1rem 0.4rem;
   border-radius: 2px;
   font-size: 0.75rem;
   font-family: monospace;
-}
-
-[data-theme='dark'] .keyword {
-  background: rgba(37, 194, 160, 0.3);
-  color: var(--resume-text);
 }
 
 /* Education */
