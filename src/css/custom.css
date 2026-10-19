@@ -65,7 +65,10 @@
   --ifm-color-content: #3c3c43;
   --ifm-color-content-inverse: #ffffff;
   --ifm-color-content-secondary: #67676c;
-  --ifm-background-color: #ffffff;
+  /* Three light levels, all factory tones: page #e2e2e3, header #f6f6f7,
+     floating surfaces white. White on white would erase the header and
+     the resume sheets, so the page stays gray. */
+  --ifm-background-color: #e2e2e3;
   --ifm-background-surface-color: #ffffff;
   /* The header steps off the body: the factory's alt tone, plus a firm
      shadow, because Infima draws the navbar edge as a shadow. */
