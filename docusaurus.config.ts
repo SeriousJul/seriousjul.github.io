@@ -81,12 +81,6 @@ const config: Config = {
         src: 'img/seriousjul.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'notes',
-          position: 'left',
-          label: 'Notes',
-        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'dropdown',
