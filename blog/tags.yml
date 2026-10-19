@@ -1,19 +1,24 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+project:
+  label: Project
+  permalink: /project
+  description: Posts about projects and their releases
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+egui:
+  label: egui
+  permalink: /egui
+  description: Posts about the egui GUI framework
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+n8n:
+  label: n8n
+  permalink: /n8n
+  description: Posts about the n8n workflow automation tool
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+omarchy:
+  label: Omarchy
+  permalink: /omarchy
+  description: Posts about the Omarchy Linux distribution
+
+strata:
+  label: Strata
+  permalink: /strata
+  description: Posts about the Strata local LLM engine

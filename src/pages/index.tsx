@@ -1,46 +1,41 @@
-import type { ReactNode } from 'react';
-import clsx from 'clsx';
+import type {ReactNode} from 'react';
+
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+const LINKS = [
+  {to: '/blog', label: 'Blog'},
+  {to: '/resume', label: 'Resume'},
+  {to: '/sudoku', label: 'Sudoku'},
+  {to: '/snake', label: 'Snake'},
+] as const;
 
-export default function Home(): ReactNode {
-  const { siteConfig } = useDocusaurusContext();
+function Home(): ReactNode {
+  const {siteConfig} = useDocusaurusContext();
+
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+    <Layout title="Home" description={siteConfig.tagline}>
+      <header className={styles.header}>
+        <div className="container">
+          <Heading as="h1" className={styles.title}>
+            {siteConfig.title}
+          </Heading>
+          <p className={styles.tagline}>{siteConfig.tagline}</p>
+          <nav className={styles.links}>
+            {LINKS.map(link => (
+              <Link key={link.to} to={link.to} className={styles.link}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </header>
     </Layout>
   );
 }
+
+export default Home;
