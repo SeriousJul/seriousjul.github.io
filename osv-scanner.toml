@@ -9,7 +9,15 @@
 # Per ADR-0001, the sanctioned answers to an advisory are a registry version
 # pin in package.json, a reachability analysis, and replacement of the
 # dependency or of the code path that reaches it.
+#
+# GHSA-vfj7-8cjw-p6xm (braces, previously allowed here) was withdrawn by
+# upstream on 2026-10-23 as not practically exploitable, so its entry was
+# removed when the decision became unused.
+
+# =============================================================================
+# deepmerge: GHSA-gcqx-w48m-w2h4
+# =============================================================================
 
 [[IgnoredVulns]]
-id = "GHSA-vfj7-8cjw-p6xm"
-reason = "braces stack-exhaustion DoS (CVE-2026-93687). No upstream fix: the advisory range ends at 3.0.3, the latest published version, so there is no registry pin. Patterns reach braces only through micromatch and chokidar, both of which receive glob patterns authored in this repository's committed configuration, and no outside party can supply a pattern to this build. Analysis: docs/adr/0001-no-local-patches-to-third-party-dependencies.md."
+id = "GHSA-gcqx-w48m-w2h4"
+reason = "deepmerge prototype pollution (CVE-2026-93753). No upstream fix: 4.3.1 is the last published version and the advisory marks it as last_affected, so there is no registry pin. Reachability: deepmerge is a transitive dependency of @svgr/plugin-svgo, which Docusaurus runs only at build time on this repository's own committed SVG assets, and the installed @svgr/plugin-svgo@8.1.0 never requires it - the declaration is stale and no code path in this tree executes deepmerge. Its other declaration is a devDependency of webpack-dev-middleware, which is not a runtime path. No outside party can supply data to the merged objects, and the site is static, so the vulnerable code never runs on end-user machines. Analysis: docs/adr/0001-no-local-patches-to-third-party-dependencies.md."
