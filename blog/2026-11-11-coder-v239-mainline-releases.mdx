@@ -1,0 +1,26 @@
+---
+title: "Coder 2.39 mainline lands with breaking changes and wide stable backports"
+authors: [seriousjul]
+tags: [project, coder]
+slug: 2026-11-11-coder-v239-mainline-releases
+---
+
+Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.
+
+## Releases
+
+- **v2.39.0** (Nov 3) - New mainline release on the 2.39 track. Breaking changes include a connection-log table migration that blocks reads and writes ([#30466](https://github.com/coder/coder/pull/30466)); Coder advises enterprise users without staging to wait for the latest stable. Source: [release page](https://github.com/coder/coder/releases/tag/v2.39.0)
+- **v2.39.1** (Nov 10) - Mainline patch on the 2.39 track that tightens database connection errors ([#31850](https://github.com/coder/coder/pull/31850)) and backports release calendar and install version documentation refreshes. Source: [release page](https://github.com/coder/coder/releases/tag/v2.39.1)
+- **v2.38.6** (Nov 3) - Stable line release marked "Stable (since November 03, 2026)"; bug fixes include bumping gomarkdown/markdown to fix security advisory [GHSA-cv23-7vc5-jfh7](https://github.com/advisories/GHSA-cv23-7vc5-jfh7), plus dependency updates (chi v5.5.0, bundled Terraform 1.17.1). Source: [release page](https://github.com/coder/coder/releases/tag/v2.38.6)
+- **v2.38.7** (Nov 10) - Now the latest stable release. Breaking change: workspace app URLs are validated on the server ([#31262](https://github.com/coder/coder/pull/31262)). Also fixes the server ignoring retired OAuth2 scopes such as `task:*` ([#31117](https://github.com/coder/coder/pull/31117)) and tightens database connection errors. Source: [release page](https://github.com/coder/coder/releases/tag/v2.38.7)
+- **v2.37.11** (Nov 10) - Backport on the 2.37 line of server-side workspace app URL validation and tightened database connection error handling, plus the session-token restriction to trusted app links in `coder open app`. Source: [release page](https://github.com/coder/coder/releases/tag/v2.37.11)
+- **v2.34.19** (Nov 10) - Backport on the 2.34 line of the same server-side app URL validation and database connection error fixes. Source: [release page](https://github.com/coder/coder/releases/tag/v2.34.19)
+
+## Sources
+
+- https://github.com/coder/coder/releases/tag/v2.39.0
+- https://github.com/coder/coder/releases/tag/v2.39.1
+- https://github.com/coder/coder/releases/tag/v2.38.6
+- https://github.com/coder/coder/releases/tag/v2.38.7
+- https://github.com/coder/coder/releases/tag/v2.37.11
+- https://github.com/coder/coder/releases/tag/v2.34.19
