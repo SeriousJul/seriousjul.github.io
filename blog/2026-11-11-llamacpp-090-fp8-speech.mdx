@@ -1,0 +1,25 @@
+---
+title: "LlamaCPP 0.9.0 lands OCP FP8 and a local speech stack"
+authors: [seriousjul]
+tags: [project, llamacpp]
+slug: 2026-11-11-llamacpp-090-fp8-speech
+---
+
+llama.cpp v0.9.0 shipped on 4 November 2026, adding OCP FP8 E4M3 quantization, a flash_attn_ext_rows op that makes the unified KV cache efficient for multi-sequence inference, and a generic batched tensor copy API. The release expands the audio stack with Chatterbox TTS, Nemotron 3.5 Transcribe and predefined Pocket TTS voices, adds four new architectures (Clover, Limite, Metis-1.6, Mistral Large 4), and bumps ggml to 0.29.0 with early NCCL multi-node tensor parallel. Community coverage on dev.to explored the new local speech stack and its limits on Windows.
+
+## Releases
+- v0.9.0 was released on 2026-11-04 as the latest stable version of llama.cpp. It adds OCP FP8 E4M3 quantization support, the new flash_attn_ext_rows op, a batched tensor copy API, and major prefill optimizations for Gemma 4 E2B/E4B models. ([source](https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0))
+- v0.9.0 updates ggml to v0.29.0, bringing early NCCL multi-node tensor parallel support. ([source](https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0))
+
+## Features
+- v0.9.0 adds first-class Chatterbox TTS, Nemotron 3.5 Transcribe and predefined Pocket TTS voices, extending audio generation and transcription in the toolchain. ([source](https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0))
+- v0.9.0 adds four new model architectures: Clover, Limite, Metis-1.6 and Mistral Large 4. ([source](https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0))
+- Nightly build b12191 (2026-11-07) introduces a --moe-cache-cpu-share parameter that lets a fraction of Mixture-of-Experts cache misses be computed on the host CPU instead of the primary device, plus a new moe-cache-tune.py script to profile and recommend --moe-cache-mib and CPU share settings. ([source](https://aiunderstanding.org/news/llama-cpp-introduces-cpu-offloading-for-mixture-of-experts-cache-misses))
+
+## Community
+- A dev.to article posted on 2026-11-05 details how v0.9.0's llama-tts tool and multimodal server support make Chatterbox TTS and Nemotron Transcribe usable as a fully local speech stack, and notes that Windows capture-path latency still limits real-time audio. ([source](https://dev.to/madnessbrains_i/llamacpp-090-ships-chatterbox-tts-and-ocp-fp8-local-speech-still-dies-on-the-windows-capture-10n0))
+
+## Sources
+- https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0
+- https://dev.to/madnessbrains_i/llamacpp-090-ships-chatterbox-tts-and-ocp-fp8-local-speech-still-dies-on-the-windows-capture-10n0
+- https://aiunderstanding.org/news/llama-cpp-introduces-cpu-offloading-for-mixture-of-experts-cache-misses
