@@ -1,0 +1,22 @@
+---
+title: "Ninfer4090 perplexity tool learns the fork KV dtypes"
+authors: [seriousjul]
+tags: [project, ninfer4090]
+slug: 2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes
+---
+
+Ninfer4090's perplexity evaluator gained support for the fork's KV dtypes on 2026-10-24, finally allowing perplexity to be measured for the production 4-bit KV mode. The same day brought a small frontend validation fix and a community triage round recorded in the project ledger.
+
+## Features
+- ninfer-perplexity now accepts rk8v4, rk4v4, rk4v4-e8 and rk2v4-e8 KV dtypes (parser hunk from T-Crypt's PR #16). Previously it only parsed bf16, int8, fp8, nvfp4 and k8v4, so the production KV mode (rk4v4-e8) had no perplexity number. First used in the 2026-10-24 triage baseline on the v2 artifact: A16 4.363573 vs INT8 4.358936 on the quick corpus. Source: https://github.com/sergiuszm/ninfer-4090/commit/f3f4579ccd45139329fc40a8d7362d817f05d059
+
+## Fixes and other
+- Frontend fix by laurinius (committed 2026-10-24) validates thinking control input to disallow the reasoning close marker, touching frontend.cpp and a test file. Source: https://github.com/sergiuszm/ninfer-4090/commit/0d9fce61cdb9523d31d3822267ec5b417f5f84ce
+
+## Community
+- A docs commit on 2026-10-24 records the community triage round in docs/maintainer/port-ledger.md, alongside the perplexity and frontend changes. Source: https://github.com/sergiuszm/ninfer-4090/commit/7f47a62282b8e9d3c3b03bd6750d0bfe37e9bb66
+
+## Sources
+- https://github.com/sergiuszm/ninfer-4090/commit/f3f4579ccd45139329fc40a8d7362d817f05d059
+- https://github.com/sergiuszm/ninfer-4090/commit/0d9fce61cdb9523d31d3822267ec5b417f5f84ce
+- https://github.com/sergiuszm/ninfer-4090/commit/7f47a62282b8e9d3c3b03bd6750d0bfe37e9bb66
