@@ -32,24 +32,6 @@
             <category>Actual Budget</category>
         </item>
         <item>
-            <title><![CDATA[Actual Budget v26.11.0 lands automatic bank syncing]]></title>
-            <link>https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0</link>
-            <guid>https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0</guid>
-            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Actual Budget published its v26.11.0 stable release on November 2, 2026. The update brings automatic bank account syncing on a chosen interval, along with new reporting and customization options, plus performance improvements for large budgets.]]></description>
-            <content:encoded><![CDATA[<p>Actual Budget published its v26.11.0 stable release on November 2, 2026. The update brings automatic bank account syncing on a chosen interval, along with new reporting and customization options, plus performance improvements for large budgets.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class="">v26.11.0 was released as the latest stable version on November 2, 2026. Highlights include automatic bank account syncing at a chosen interval, tag-based grouping for custom reports, customizable sidebar pages and start page, per-budget SimpleFIN credentials, and performance and memory optimizations for large budgets. (<a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/actualbudget/actual/releases/tag/v26.11.0</a></li>
-</ul>]]></content:encoded>
-            <category>Project</category>
-            <category>Actual Budget</category>
-        </item>
-        <item>
             <title><![CDATA[Coder v2.38.7 becomes latest stable as v2.39 mainline ships]]></title>
             <link>https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable</link>
             <guid>https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable</guid>
@@ -72,34 +54,6 @@
 <li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a></li>
 <li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.0</a></li>
 <li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a></li>
-</ul>]]></content:encoded>
-            <category>Project</category>
-            <category>Coder</category>
-        </item>
-        <item>
-            <title><![CDATA[Coder 2.39 mainline lands with breaking changes and wide stable backports]]></title>
-            <link>https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases</link>
-            <guid>https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases</guid>
-            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.]]></description>
-            <content:encoded><![CDATA[<p>Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class=""><strong>v2.39.0</strong> (Nov 3) - New mainline release on the 2.39 track. Breaking changes include a connection-log table migration that blocks reads and writes (<a href="https://github.com/coder/coder/pull/30466" target="_blank" rel="noopener noreferrer" class="">#30466</a>); Coder advises enterprise users without staging to wait for the latest stable. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.39.1</strong> (Nov 10) - Mainline patch on the 2.39 track that tightens database connection errors (<a href="https://github.com/coder/coder/pull/31850" target="_blank" rel="noopener noreferrer" class="">#31850</a>) and backports release calendar and install version documentation refreshes. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.38.6</strong> (Nov 3) - Stable line release marked "Stable (since November 03, 2026)"; bug fixes include bumping gomarkdown/markdown to fix security advisory <a href="https://github.com/advisories/GHSA-cv23-7vc5-jfh7" target="_blank" rel="noopener noreferrer" class="">GHSA-cv23-7vc5-jfh7</a>, plus dependency updates (chi v5.5.0, bundled Terraform 1.17.1). Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.6" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.38.7</strong> (Nov 10) - Now the latest stable release. Breaking change: workspace app URLs are validated on the server (<a href="https://github.com/coder/coder/pull/31262" target="_blank" rel="noopener noreferrer" class="">#31262</a>). Also fixes the server ignoring retired OAuth2 scopes such as <code>task:*</code> (<a href="https://github.com/coder/coder/pull/31117" target="_blank" rel="noopener noreferrer" class="">#31117</a>) and tightens database connection errors. Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.37.11</strong> (Nov 10) - Backport on the 2.37 line of server-side workspace app URL validation and tightened database connection error handling, plus the session-token restriction to trusted app links in <code>coder open app</code>. Source: <a href="https://github.com/coder/coder/releases/tag/v2.37.11" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.34.19</strong> (Nov 10) - Backport on the 2.34 line of the same server-side app URL validation and database connection error fixes. Source: <a href="https://github.com/coder/coder/releases/tag/v2.34.19" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.0</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.6" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.6</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.37.11" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.37.11</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.34.19" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.34.19</a></li>
 </ul>]]></content:encoded>
             <category>Project</category>
             <category>Coder</category>
