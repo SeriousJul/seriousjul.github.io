@@ -80,6 +80,37 @@
             <category>egui</category>
         </item>
         <item>
+            <title><![CDATA[LlamaCPP 0.9.0 lands OCP FP8 and a local speech stack]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[llama.cpp v0.9.0 shipped on 4 November 2026, adding OCP FP8 E4M3 quantization, a flashattnext_rows op that makes the unified KV cache efficient for multi-sequence inference, and a generic batched tensor copy API. The release expands the audio stack with Chatterbox TTS, Nemotron 3.5 Transcribe and predefined Pocket TTS voices, adds four new architectures (Clover, Limite, Metis-1.6, Mistral Large 4), and bumps ggml to 0.29.0 with early NCCL multi-node tensor parallel. Community coverage on dev.to explored the new local speech stack and its limits on Windows.]]></description>
+            <content:encoded><![CDATA[<p>llama.cpp v0.9.0 shipped on 4 November 2026, adding OCP FP8 E4M3 quantization, a flash_attn_ext_rows op that makes the unified KV cache efficient for multi-sequence inference, and a generic batched tensor copy API. The release expands the audio stack with Chatterbox TTS, Nemotron 3.5 Transcribe and predefined Pocket TTS voices, adds four new architectures (Clover, Limite, Metis-1.6, Mistral Large 4), and bumps ggml to 0.29.0 with early NCCL multi-node tensor parallel. Community coverage on dev.to explored the new local speech stack and its limits on Windows.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v0.9.0 was released on 2026-11-04 as the latest stable version of llama.cpp. It adds OCP FP8 E4M3 quantization support, the new flash_attn_ext_rows op, a batched tensor copy API, and major prefill optimizations for Gemma 4 E2B/E4B models. (<a href="https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+<li class="">v0.9.0 updates ggml to v0.29.0, bringing early NCCL multi-node tensor parallel support. (<a href="https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">v0.9.0 adds first-class Chatterbox TTS, Nemotron 3.5 Transcribe and predefined Pocket TTS voices, extending audio generation and transcription in the toolchain. (<a href="https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+<li class="">v0.9.0 adds four new model architectures: Clover, Limite, Metis-1.6 and Mistral Large 4. (<a href="https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+<li class="">Nightly build b12191 (2026-11-07) introduces a --moe-cache-cpu-share parameter that lets a fraction of Mixture-of-Experts cache misses be computed on the host CPU instead of the primary device, plus a new moe-cache-tune.py script to profile and recommend --moe-cache-mib and CPU share settings. (<a href="https://aiunderstanding.org/news/llama-cpp-introduces-cpu-offloading-for-mixture-of-experts-cache-misses" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">A dev.to article posted on 2026-11-05 details how v0.9.0's llama-tts tool and multimodal server support make Chatterbox TTS and Nemotron Transcribe usable as a fully local speech stack, and notes that Windows capture-path latency still limits real-time audio. (<a href="https://dev.to/madnessbrains_i/llamacpp-090-ships-chatterbox-tts-and-ocp-fp8-local-speech-still-dies-on-the-windows-capture-10n0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0</a></li>
+<li class=""><a href="https://dev.to/madnessbrains_i/llamacpp-090-ships-chatterbox-tts-and-ocp-fp8-local-speech-still-dies-on-the-windows-capture-10n0" target="_blank" rel="noopener noreferrer" class="">https://dev.to/madnessbrains_i/llamacpp-090-ships-chatterbox-tts-and-ocp-fp8-local-speech-still-dies-on-the-windows-capture-10n0</a></li>
+<li class=""><a href="https://aiunderstanding.org/news/llama-cpp-introduces-cpu-offloading-for-mixture-of-experts-cache-misses" target="_blank" rel="noopener noreferrer" class="">https://aiunderstanding.org/news/llama-cpp-introduces-cpu-offloading-for-mixture-of-experts-cache-misses</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>llamacpp</category>
+        </item>
+        <item>
             <title><![CDATA[Ninfer4090 perplexity tool learns the fork KV dtypes]]></title>
             <link>https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes</link>
             <guid>https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes</guid>
