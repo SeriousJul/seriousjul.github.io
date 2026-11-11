@@ -8,6 +8,33 @@
     <subtitle>SeriousJul Blog</subtitle>
     <icon>https://seriousjul.github.io/img/seriousjul.png</icon>
     <entry>
+        <title type="html"><![CDATA[Actual Budget 26.11.0 ships automatic syncing and breaking SimpleFin change]]></title>
+        <id>https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release</id>
+        <link href="https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release"/>
+        <updated>2026-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Actual Budget released version 26.11.0 on 2026-11-02, its latest stable release. The update adds automatic bank syncing at a chosen interval, custom reports grouped by tags, and a more customizable sidebar, alongside per-budget SimpleFIN credentials and performance optimizations for large budgets. It also introduces a breaking change: custom SimpleFIN bridges on private networks now require a server allowlist.]]></summary>
+        <content type="html"><![CDATA[<p>Actual Budget released version 26.11.0 on 2026-11-02, its latest stable release. The update adds automatic bank syncing at a chosen interval, custom reports grouped by tags, and a more customizable sidebar, alongside per-budget SimpleFIN credentials and performance optimizations for large budgets. It also introduces a breaking change: custom SimpleFIN bridges on private networks now require a server allowlist.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v26.11.0 released on 2026-11-02, adding automatic bank syncing at a chosen interval, custom reports grouped by tags, and more customizable sidebar navigation (<a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">The same release includes per-budget SimpleFIN credentials and performance optimizations for large budgets (<a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">Breaking change in v26.11.0 (2026-11-02): custom SimpleFIN bridges on private networks now require a server allowlist (<a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/actualbudget/actual/releases/tag/v26.11.0</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="Project" term="Project"/>
+        <category label="Actual Budget" term="Actual Budget"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Actual Budget v26.11.0 lands automatic bank syncing]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0"/>
