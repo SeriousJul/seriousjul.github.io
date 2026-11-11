@@ -229,6 +229,30 @@
             <category>Omarchy</category>
         </item>
         <item>
+            <title><![CDATA[OmniRoute ships stable releases v3.8.53 and v3.8.52]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-omniroute-stable-releases</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-omniroute-stable-releases</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[OmniRoute shipped two stable releases in this window: v3.8.52 on 2026-10-19 and v3.8.53 on 2026-11-06, the latter now marked as the latest release. Both carried large documented changelogs with attached release notes and credited large contributor bases.]]></description>
+            <content:encoded><![CDATA[<p>OmniRoute shipped two stable releases in this window: v3.8.52 on 2026-10-19 and v3.8.53 on 2026-11-06, the latter now marked as the latest release. Both carried large documented changelogs with attached release notes and credited large contributor bases.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-omniroute-stable-releases#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v3.8.53 (2026-11-06): shipped as a stable release and is currently the latest; it includes 1,189 documented changes from 1,162 commits, with complete notes attached as CHANGELOG-v3.8.53.md. Source: <a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.53" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.53</a></li>
+<li class="">v3.8.52 (2026-10-19): published as a stable release with 1,442 documented changes (135 features, 1,112 fixes, 195 maintenance entries) from 1,386 commits, with full notes attached as CHANGELOG-v3.8.52.md. Source: <a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.52" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.52</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-omniroute-stable-releases#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">The release pages for v3.8.52 (2026-10-19) and v3.8.53 (2026-11-06) thank their contributor bases: 306 external contributors for v3.8.52 and 222 people contributing to v3.8.53. Sources: <a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.52" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.52</a>, <a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.53" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.53</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-omniroute-stable-releases#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.52" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.52</a></li>
+<li class=""><a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.53" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.53</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>omniroute</category>
+        </item>
+        <item>
             <title><![CDATA[Gadgetbridge 2026.11.1 stable lands with widget and Garmin fixes]]></title>
             <link>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable</link>
             <guid>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable</guid>
