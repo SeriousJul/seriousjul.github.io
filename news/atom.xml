@@ -66,38 +66,6 @@
         <category label="Coder" term="Coder"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Coder 2.39 mainline lands with breaking changes and wide stable backports]]></title>
-        <id>https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases</id>
-        <link href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases"/>
-        <updated>2026-11-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.]]></summary>
-        <content type="html"><![CDATA[<p>Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class=""><strong>v2.39.0</strong> (Nov 3) - New mainline release on the 2.39 track. Breaking changes include a connection-log table migration that blocks reads and writes (<a href="https://github.com/coder/coder/pull/30466" target="_blank" rel="noopener noreferrer" class="">#30466</a>); Coder advises enterprise users without staging to wait for the latest stable. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.39.1</strong> (Nov 10) - Mainline patch on the 2.39 track that tightens database connection errors (<a href="https://github.com/coder/coder/pull/31850" target="_blank" rel="noopener noreferrer" class="">#31850</a>) and backports release calendar and install version documentation refreshes. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.38.6</strong> (Nov 3) - Stable line release marked "Stable (since November 03, 2026)"; bug fixes include bumping gomarkdown/markdown to fix security advisory <a href="https://github.com/advisories/GHSA-cv23-7vc5-jfh7" target="_blank" rel="noopener noreferrer" class="">GHSA-cv23-7vc5-jfh7</a>, plus dependency updates (chi v5.5.0, bundled Terraform 1.17.1). Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.6" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.38.7</strong> (Nov 10) - Now the latest stable release. Breaking change: workspace app URLs are validated on the server (<a href="https://github.com/coder/coder/pull/31262" target="_blank" rel="noopener noreferrer" class="">#31262</a>). Also fixes the server ignoring retired OAuth2 scopes such as <code>task:*</code> (<a href="https://github.com/coder/coder/pull/31117" target="_blank" rel="noopener noreferrer" class="">#31117</a>) and tightens database connection errors. Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.37.11</strong> (Nov 10) - Backport on the 2.37 line of server-side workspace app URL validation and tightened database connection error handling, plus the session-token restriction to trusted app links in <code>coder open app</code>. Source: <a href="https://github.com/coder/coder/releases/tag/v2.37.11" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-<li class=""><strong>v2.34.19</strong> (Nov 10) - Backport on the 2.34 line of the same server-side app URL validation and database connection error fixes. Source: <a href="https://github.com/coder/coder/releases/tag/v2.34.19" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.0</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.6" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.6</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.37.11" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.37.11</a></li>
-<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.34.19" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.34.19</a></li>
-</ul>]]></content>
-        <author>
-            <name>Julien Antony</name>
-            <uri>https://seriousjul.github.io</uri>
-        </author>
-        <category label="Project" term="Project"/>
-        <category label="Coder" term="Coder"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[egui 0.37.0 ships colored emoji]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji"/>
@@ -109,35 +77,6 @@
 <li class="">On 2026-10-15, egui released version 0.37.0, headlined by colored emoji and full system glyph rendering. The release adds the CompletionPopup autocomplete widget, an experimental theme customization system, and MP4 video recording for integration tests. It also includes breaking changes: default_fonts is no longer a default feature, and new Id APIs were introduced. Source: <a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
-</ul>]]></content>
-        <author>
-            <name>Julien Antony</name>
-            <uri>https://seriousjul.github.io</uri>
-        </author>
-        <category label="Project" term="Project"/>
-        <category label="egui" term="egui"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Egui 0.37.0 lands colored emoji and glyph rendering]]></title>
-        <id>https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis</id>
-        <link href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis"/>
-        <updated>2026-11-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Egui released version 0.37.0 ("Colored emojis!") on 2026-10-15. The release adds rendering of any system glyph, including colored emojis and non-Latin scripts, through new GlyphRasterizer and FontProvider APIs, and ships a CompletionPopup widget for TextEdit autocomplete.]]></summary>
-        <content type="html"><![CDATA[<p>Egui released version 0.37.0 ("Colored emojis!") on 2026-10-15. The release adds rendering of any system glyph, including colored emojis and non-Latin scripts, through new GlyphRasterizer and FontProvider APIs, and ships a CompletionPopup widget for TextEdit autocomplete.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class="">2026-10-15: egui 0.37.0 ("Colored emojis!") released, the latest stable version of the crate (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
-<ul>
-<li class="">Any system glyph can now be rendered, including colored emojis and non-Latin scripts, via the new GlyphRasterizer and FontProvider APIs (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-<li class="">New CompletionPopup widget provides autocomplete support for TextEdit (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-<li class="">Experimental widget theme plugin system introduced (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-<li class="">egui_kittest can now record mp4 videos of integration tests (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
 <ul>
 <li class=""><a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
 </ul>]]></content>
@@ -365,66 +304,6 @@
         </author>
         <category label="Project" term="Project"/>
         <category label="Strata" term="Strata"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gadgetbridge 2026.11.1 stable lands with widget and Garmin fixes]]></title>
-        <id>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable</id>
-        <link href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable"/>
-        <updated>2026-11-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Gadgetbridge shipped stable release 2026.11.1 on 2026-11-07, a point release focused on dashboard widgets, sleep/HRV chart polish, and several device and platform fixes. The same week, version 2026.11.0 (build 256) appeared as a suggested update on F-Droid, where its release notes highlight 25 new plus 21 experimental devices and a refreshed design.]]></summary>
-        <content type="html"><![CDATA[<p>Gadgetbridge shipped stable release 2026.11.1 on 2026-11-07, a point release focused on dashboard widgets, sleep/HRV chart polish, and several device and platform fixes. The same week, version 2026.11.0 (build 256) appeared as a suggested update on F-Droid, where its release notes highlight 25 new plus 21 experimental devices and a refreshed design.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class="">2026.11.1 stable was released by joserebelo on 2026-11-07. The changelog covers dashboard widget fixes and improvements (manage widgets setting, tile reshuffling, large font support, theme colors for sleep/HRV charts), Endurain SSO login callback fix, a weather-processing crash fix on Android &lt; 13, a Garmin web request URL-encoding regression fix, Health Connect skin-temperature delta correction, and improved Zepp OS BTBR packet handling. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
-<ul>
-<li class="">On 2026-11-06 the F-Droid repository listed Gadgetbridge 2026.11.0 (build 256) as a suggested update, with release highlights including support for 25 new plus 21 experimental devices, a refreshed design for dashboard, charts, and alarms, device cards, a workouts tab, Garmin import from the official app, and multiple fixes for charts, Health Connect, Huami, Xiaomi, and Zepp OS. (<a href="https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge/" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1</a></li>
-<li class=""><a href="https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge/" target="_blank" rel="noopener noreferrer" class="">https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge/</a></li>
-</ul>]]></content>
-        <author>
-            <name>Julien Antony</name>
-            <uri>https://seriousjul.github.io</uri>
-        </author>
-        <category label="Project" term="Project"/>
-        <category label="Gadgetbridge" term="Gadgetbridge"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Egui 0.37.0 lands colored emoji support]]></title>
-        <id>https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release</id>
-        <link href="https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release"/>
-        <updated>2026-10-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Egui 0.37.0, titled "Colored emojis!", was released on 2026-10-15 and is the first release to ship full emoji and glyph support via a new glyph rasterizer and font provider API. The same release adds a CompletionPopup autocomplete widget and an experimental theme plugin system, alongside improved AccessKit accessibility, video recording of integration tests, and breaking changes for API users.]]></summary>
-        <content type="html"><![CDATA[<p>Egui 0.37.0, titled "Colored emojis!", was released on 2026-10-15 and is the first release to ship full emoji and glyph support via a new glyph rasterizer and font provider API. The same release adds a CompletionPopup autocomplete widget and an experimental theme plugin system, alongside improved AccessKit accessibility, video recording of integration tests, and breaking changes for API users.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
-<ul>
-<li class="">On 2026-10-15, egui released stable version 0.37.0 ("Colored emojis!") featuring full emoji and glyph support through a new glyph rasterizer/font provider API, a CompletionPopup autocomplete widget, an experimental theme plugin system, improved AccessKit accessibility, and video recording of integration tests (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
-<ul>
-<li class="">Full colored emoji and glyph support via a new glyph rasterizer and font provider API, introduced in 0.37.0 on 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-<li class="">New CompletionPopup autocomplete widget in 0.37.0, released 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-<li class="">Experimental theme plugin system shipped in 0.37.0 on 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-<li class="">Improved accessibility through AccessKit and video recording of integration tests, both in 0.37.0 on 2026-10-15 (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
-<ul>
-<li class="">Breaking changes in 0.37.0 (2026-10-15): the AsId trait was removed and default_fonts was dropped from the default feature set (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
-<ul>
-<li class=""><a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
-</ul>]]></content>
-        <author>
-            <name>Julien Antony</name>
-            <uri>https://seriousjul.github.io</uri>
-        </author>
-        <category label="Project" term="Project"/>
-        <category label="egui" term="egui"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[n8n 2.43.7 stable lands execution suspension as ZoomInfo ships native node]]></title>
