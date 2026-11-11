@@ -120,6 +120,28 @@
         <category label="Coder" term="Coder"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[egui 0.37.0 ships colored emoji]]></title>
+        <id>https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji</id>
+        <link href="https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji"/>
+        <updated>2026-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[egui released version 0.37.0 on 2026-10-15, bringing colored emoji with full system glyph rendering, a new CompletionPopup autocomplete widget, and an experimental theme customization system. The release also adds MP4 video recording for integration tests and ships breaking changes, so upgrading projects should expect API and feature-flag adjustments.]]></summary>
+        <content type="html"><![CDATA[<p>egui released version 0.37.0 on 2026-10-15, bringing colored emoji with full system glyph rendering, a new CompletionPopup autocomplete widget, and an experimental theme customization system. The release also adds MP4 video recording for integration tests and ships breaking changes, so upgrading projects should expect API and feature-flag adjustments.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">On 2026-10-15, egui released version 0.37.0, headlined by colored emoji and full system glyph rendering. The release adds the CompletionPopup autocomplete widget, an experimental theme customization system, and MP4 video recording for integration tests. It also includes breaking changes: default_fonts is no longer a default feature, and new Id APIs were introduced. Source: <a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-egui-0-37-0-colored-emoji#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="Project" term="Project"/>
+        <category label="egui" term="egui"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Egui 0.37.0 lands colored emoji and glyph rendering]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis"/>
