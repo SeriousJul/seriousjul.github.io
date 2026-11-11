@@ -207,6 +207,38 @@
             <category>Ninfer4090</category>
         </item>
         <item>
+            <title><![CDATA[Omarchy 4.5 lands with desktop mode and Apple Silicon support]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-omarchy-4-5-released</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-omarchy-4-5-released</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Omarchy 4.5 (codenamed Quattro RS) shipped on November 5, 2026 as the project's first big feature release since Quattro, after more than 740 pull requests from 180+ contributors in twelve weeks. The headline changes: a traditional desktop mode alongside the tiling default, native installation on Apple Silicon MacBooks (M1/M2/M3/Neo), and interface support for 50 languages. The project also expanded beyond x86_64 for the first time, with reported support for NVIDIA N1X laptops and DGX Spark, while Snapdragon X laptop support is forthcoming.]]></description>
+            <content:encoded><![CDATA[<p>Omarchy 4.5 (codenamed Quattro RS) shipped on November 5, 2026 as the project's first big feature release since Quattro, after more than 740 pull requests from 180+ contributors in twelve weeks. The headline changes: a traditional desktop mode alongside the tiling default, native installation on Apple Silicon MacBooks (M1/M2/M3/Neo), and interface support for 50 languages. The project also expanded beyond x86_64 for the first time, with reported support for NVIDIA N1X laptops and DGX Spark, while Snapdragon X laptop support is forthcoming.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-omarchy-4-5-released#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">Omarchy v4.5.0 (Quattro RS) was released to GitHub on November 5, 2026: the first major feature release since Quattro, adding a traditional desktop mode next to the tiling default, a native installer for M1/M2/M3/Neo MacBooks, and 50 languages (<a href="https://github.com/omacom/omarchy/releases/tag/v4.5.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">The release was announced on the project's news page on November 4, 2026, with instructions for existing users (Update &gt; Omarchy) and a direct download for new machines (<a href="https://omarchy.org/news/2026/11/omarchy-4-5/" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-11-11-omarchy-4-5-released#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">Floating workspaces with a dock: Super + L cycles any workspace between tiling, scrolling, and floating; floating windows get themed titlebars, a dock of pinned and running apps, and Super + M minimizes to the dock (<a href="https://omarchy.org/news/2026/11/omarchy-4-5/" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">Native Apple Silicon support: the Omarchy M team shipped a native Mac installer for M1/M2/M3/Neo MacBooks, building on Asahi Linux work (<a href="https://omarchy.org/news/2026/11/omarchy-4-5/" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">First multi-architecture release: beyond x86_64, Phoronix reports support for Apple Silicon hardware, NVIDIA N1X laptops, and DGX Spark desktops, with Snapdragon X support planned (<a href="https://www.phoronix.com/news/Omarchy-4.5-Released" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">More desktop customizations, including per-monitor workspaces, rebuilt notifications, an Appearance menu, and four new default apps (Hype, Monologue, Signed, Disktree), plus 50 languages (<a href="https://omarchy.org/news/2026/11/omarchy-4-5/" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-omarchy-4-5-released#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">Phoronix covered the release on November 5, 2026, highlighting the distro's expansion beyond x86_64 and its new desktop customization options (<a href="https://www.phoronix.com/news/Omarchy-4.5-Released" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-omarchy-4-5-released#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/omacom/omarchy/releases/tag/v4.5.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/omacom/omarchy/releases/tag/v4.5.0</a></li>
+<li class=""><a href="https://omarchy.org/news/2026/11/omarchy-4-5/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/11/omarchy-4-5/</a></li>
+<li class=""><a href="https://www.phoronix.com/news/Omarchy-4.5-Released" target="_blank" rel="noopener noreferrer" class="">https://www.phoronix.com/news/Omarchy-4.5-Released</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Omarchy</category>
+        </item>
+        <item>
             <title><![CDATA[Omarchy Core grows: Alcantara and Skyum join, Greptile becomes Distinguished Corporate Patron]]></title>
             <link>https://seriousjul.github.io/news/2026-11-11-omarchy-core-grows</link>
             <guid>https://seriousjul.github.io/news/2026-11-11-omarchy-core-grows</guid>
