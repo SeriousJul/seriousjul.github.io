@@ -328,6 +328,37 @@
         <category label="omniroute" term="omniroute"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Strata 0.2.13 lands Strix Halo launch fix and DFlash2 defaults]]></title>
+        <id>https://seriousjul.github.io/news/2026-11-11-strata-0213-strix-halo-fix</id>
+        <link href="https://seriousjul.github.io/news/2026-11-11-strata-0213-strix-halo-fix"/>
+        <updated>2026-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Strata 0.2.13 (engine 0.1.59) shipped on November 9, 2026 with new per-card DFlash2 drafting defaults, a much faster app start, an Intel Arc determinism fix, a Linux expert-store loading fix, and groundwork for Qwen4. Press coverage highlights the Strix Halo Terminal launch fix, which cut startup from up to about 10 minutes to 60-85 seconds, and notes the project has passed 42,000 GitHub stars.]]></summary>
+        <content type="html"><![CDATA[<p>Strata 0.2.13 (engine 0.1.59) shipped on November 9, 2026 with new per-card DFlash2 drafting defaults, a much faster app start, an Intel Arc determinism fix, a Linux expert-store loading fix, and groundwork for Qwen4. Press coverage highlights the Strix Halo Terminal launch fix, which cut startup from up to about 10 minutes to 60-85 seconds, and notes the project has passed 42,000 GitHub stars.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-strata-0213-strix-halo-fix#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">Strata 0.2.13 released on 2026-11-09 (app and Terminal 0.2.13, Control and all engine packages 0.1.59; DGX Spark also receives 0.2.13). The update brings new card-specific DFlash2 drafting defaults (49.1 tok/s on Strix Halo, +5.2%), a faster app start, and Qwen4 groundwork: <a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.13" target="_blank" rel="noopener noreferrer" class="">release notes</a>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-11-strata-0213-strix-halo-fix#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">The release includes a Strix Halo Terminal launch fix reducing startup from up to ~594 s to 60-85 s, an Intel Arc determinism fix, and a fix for broken Linux expert-store loading, plus follow-up 0.2.13.1 letting the Linux desktop app set up models on Intel Arc cards: <a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.13" target="_blank" rel="noopener noreferrer" class="">release notes</a>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-strata-0213-strix-halo-fix#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">Linux Compatible covered the 0.2.13 release on 2026-11-09, calling it the most practical update yet to the engine and noting Strata has climbed past 42,000 GitHub stars: <a href="https://www.linuxcompatible.org/story/strata-0213-strix-halo-launch-fix-and-qwen4-prep-for-the-125b-consumerpc-llm-engine/" target="_blank" rel="noopener noreferrer" class="">article</a>.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-strata-0213-strix-halo-fix#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.13" target="_blank" rel="noopener noreferrer" class="">https://github.com/Niko1221/Strata/releases/tag/v0.2.13</a></li>
+<li class=""><a href="https://www.linuxcompatible.org/story/strata-0213-strix-halo-launch-fix-and-qwen4-prep-for-the-125b-consumerpc-llm-engine/" target="_blank" rel="noopener noreferrer" class="">https://www.linuxcompatible.org/story/strata-0213-strix-halo-launch-fix-and-qwen4-prep-for-the-125b-consumerpc-llm-engine/</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="Project" term="Project"/>
+        <category label="Strata" term="Strata"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Gadgetbridge 2026.11.1 stable lands with widget and Garmin fixes]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable"/>
