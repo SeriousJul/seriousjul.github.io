@@ -57,6 +57,37 @@
         <category label="Actual Budget" term="Actual Budget"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Coder v2.38.7 becomes latest stable as v2.39 mainline ships]]></title>
+        <id>https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable</id>
+        <link href="https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable"/>
+        <updated>2026-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Coder moved the 2.38 line to the latest stable release with v2.38.7 on November 10, 2026, carrying a breaking change that validates workspace app URLs on the server. The v2.39 mainline line advanced in the same window: v2.39.0 shipped on November 3 with breaking changes, and v2.39.1 followed on November 10 as a patch release.]]></summary>
+        <content type="html"><![CDATA[<p>Coder moved the 2.38 line to the latest stable release with v2.38.7 on November 10, 2026, carrying a breaking change that validates workspace app URLs on the server. The v2.39 mainline line advanced in the same window: v2.39.0 shipped on November 3 with breaking changes, and v2.39.1 followed on November 10 as a patch release.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v2.38.7 (Nov 10, 2026): now the latest stable release ("Stable since November 10, 2026"). Breaking change: validate workspace app URLs on the server (#31262). Also fixes: ignore retired OAuth2 scopes such as task:* (#31117) and tighten up database connection errors (#31850). Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a></li>
+<li class="">v2.39.0 (Nov 3, 2026): November mainline release. Includes breaking changes, such as the connection log migration that blocks reads and writes during the rewrite of the connection_logs table (#30466). Coder advises enterprise users without a staging environment to stay on the latest stable release while 2.39 is refined. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.0</a></li>
+<li class="">v2.39.1 (Nov 10, 2026): mainline patch release on the 2.39 line, fixing tightened-up database connection errors (#31850) and backporting release calendar and install version documentation refresh for v2.39.0 (#31716). Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">Server-side validation of workspace app URLs lands in v2.38.7 as a breaking fix, so misconfigured workspace app URLs are now rejected by the server (<a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a>).</li>
+<li class="">Database connection error handling was tightened on both the 2.38 and 2.39 lines via #31850 (<a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-coder-2-38-7-stable#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.0</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="Project" term="Project"/>
+        <category label="Coder" term="Coder"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Coder 2.39 mainline lands with breaking changes and wide stable backports]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases"/>
