@@ -4,10 +4,154 @@
         <title>SeriousJul Blog</title>
         <link>https://seriousjul.github.io/news</link>
         <description>SeriousJul Blog</description>
-        <lastBuildDate>Sun, 18 Oct 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 11 Nov 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Actual Budget v26.11.0 lands automatic bank syncing]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Actual Budget published its v26.11.0 stable release on November 2, 2026. The update brings automatic bank account syncing on a chosen interval, along with new reporting and customization options, plus performance improvements for large budgets.]]></description>
+            <content:encoded><![CDATA[<p>Actual Budget published its v26.11.0 stable release on November 2, 2026. The update brings automatic bank account syncing on a chosen interval, along with new reporting and customization options, plus performance improvements for large budgets.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v26.11.0 was released as the latest stable version on November 2, 2026. Highlights include automatic bank account syncing at a chosen interval, tag-based grouping for custom reports, customizable sidebar pages and start page, per-budget SimpleFIN credentials, and performance and memory optimizations for large budgets. (<a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-actual-budget-v26-11-0#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/actualbudget/actual/releases/tag/v26.11.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/actualbudget/actual/releases/tag/v26.11.0</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Actual Budget</category>
+        </item>
+        <item>
+            <title><![CDATA[Coder 2.39 mainline lands with breaking changes and wide stable backports]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.]]></description>
+            <content:encoded><![CDATA[<p>Coder shipped a new mainline v2.39.0 on Nov 3 with breaking changes, followed by v2.39.1 on Nov 10, while the stable lines all moved: v2.38.6 closed security advisory GHSA-cv23-7vc5-jfh7, and v2.38.7 became the new latest stable with a breaking change that validates workspace app URLs on the server. Backport releases v2.37.11 and v2.34.19 followed on Nov 10.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>v2.39.0</strong> (Nov 3) - New mainline release on the 2.39 track. Breaking changes include a connection-log table migration that blocks reads and writes (<a href="https://github.com/coder/coder/pull/30466" target="_blank" rel="noopener noreferrer" class="">#30466</a>); Coder advises enterprise users without staging to wait for the latest stable. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
+<li class=""><strong>v2.39.1</strong> (Nov 10) - Mainline patch on the 2.39 track that tightens database connection errors (<a href="https://github.com/coder/coder/pull/31850" target="_blank" rel="noopener noreferrer" class="">#31850</a>) and backports release calendar and install version documentation refreshes. Source: <a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
+<li class=""><strong>v2.38.6</strong> (Nov 3) - Stable line release marked "Stable (since November 03, 2026)"; bug fixes include bumping gomarkdown/markdown to fix security advisory <a href="https://github.com/advisories/GHSA-cv23-7vc5-jfh7" target="_blank" rel="noopener noreferrer" class="">GHSA-cv23-7vc5-jfh7</a>, plus dependency updates (chi v5.5.0, bundled Terraform 1.17.1). Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.6" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
+<li class=""><strong>v2.38.7</strong> (Nov 10) - Now the latest stable release. Breaking change: workspace app URLs are validated on the server (<a href="https://github.com/coder/coder/pull/31262" target="_blank" rel="noopener noreferrer" class="">#31262</a>). Also fixes the server ignoring retired OAuth2 scopes such as <code>task:*</code> (<a href="https://github.com/coder/coder/pull/31117" target="_blank" rel="noopener noreferrer" class="">#31117</a>) and tightens database connection errors. Source: <a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
+<li class=""><strong>v2.37.11</strong> (Nov 10) - Backport on the 2.37 line of server-side workspace app URL validation and tightened database connection error handling, plus the session-token restriction to trusted app links in <code>coder open app</code>. Source: <a href="https://github.com/coder/coder/releases/tag/v2.37.11" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
+<li class=""><strong>v2.34.19</strong> (Nov 10) - Backport on the 2.34 line of the same server-side app URL validation and database connection error fixes. Source: <a href="https://github.com/coder/coder/releases/tag/v2.34.19" target="_blank" rel="noopener noreferrer" class="">release page</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-coder-v239-mainline-releases#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.0</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.39.1" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.39.1</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.6" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.6</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.38.7" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.38.7</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.37.11" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.37.11</a></li>
+<li class=""><a href="https://github.com/coder/coder/releases/tag/v2.34.19" target="_blank" rel="noopener noreferrer" class="">https://github.com/coder/coder/releases/tag/v2.34.19</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Coder</category>
+        </item>
+        <item>
+            <title><![CDATA[Egui 0.37.0 lands colored emoji and glyph rendering]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Egui released version 0.37.0 ("Colored emojis!") on 2026-10-15. The release adds rendering of any system glyph, including colored emojis and non-Latin scripts, through new GlyphRasterizer and FontProvider APIs, and ships a CompletionPopup widget for TextEdit autocomplete.]]></description>
+            <content:encoded><![CDATA[<p>Egui released version 0.37.0 ("Colored emojis!") on 2026-10-15. The release adds rendering of any system glyph, including colored emojis and non-Latin scripts, through new GlyphRasterizer and FontProvider APIs, and ships a CompletionPopup widget for TextEdit autocomplete.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">2026-10-15: egui 0.37.0 ("Colored emojis!") released, the latest stable version of the crate (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">Any system glyph can now be rendered, including colored emojis and non-Latin scripts, via the new GlyphRasterizer and FontProvider APIs (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">New CompletionPopup widget provides autocomplete support for TextEdit (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">Experimental widget theme plugin system introduced (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+<li class="">egui_kittest can now record mp4 videos of integration tests (0.37.0) (<a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">source</a>).</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-egui-0370-colored-emojis#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/emilk/egui/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer" class="">https://github.com/emilk/egui/releases/tag/0.37.0</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>egui</category>
+        </item>
+        <item>
+            <title><![CDATA[Ninfer4090 perplexity tool learns the fork KV dtypes]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Ninfer4090's perplexity evaluator gained support for the fork's KV dtypes on 2026-10-24, finally allowing perplexity to be measured for the production 4-bit KV mode. The same day brought a small frontend validation fix and a community triage round recorded in the project ledger.]]></description>
+            <content:encoded><![CDATA[<p>Ninfer4090's perplexity evaluator gained support for the fork's KV dtypes on 2026-10-24, finally allowing perplexity to be measured for the production 4-bit KV mode. The same day brought a small frontend validation fix and a community triage round recorded in the project ledger.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">ninfer-perplexity now accepts rk8v4, rk4v4, rk4v4-e8 and rk2v4-e8 KV dtypes (parser hunk from T-Crypt's PR #16). Previously it only parsed bf16, int8, fp8, nvfp4 and k8v4, so the production KV mode (rk4v4-e8) had no perplexity number. First used in the 2026-10-24 triage baseline on the v2 artifact: A16 4.363573 vs INT8 4.358936 on the quick corpus. Source: <a href="https://github.com/sergiuszm/ninfer-4090/commit/f3f4579ccd45139329fc40a8d7362d817f05d059" target="_blank" rel="noopener noreferrer" class="">https://github.com/sergiuszm/ninfer-4090/commit/f3f4579ccd45139329fc40a8d7362d817f05d059</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">Frontend fix by laurinius (committed 2026-10-24) validates thinking control input to disallow the reasoning close marker, touching frontend.cpp and a test file. Source: <a href="https://github.com/sergiuszm/ninfer-4090/commit/0d9fce61cdb9523d31d3822267ec5b417f5f84ce" target="_blank" rel="noopener noreferrer" class="">https://github.com/sergiuszm/ninfer-4090/commit/0d9fce61cdb9523d31d3822267ec5b417f5f84ce</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">A docs commit on 2026-10-24 records the community triage round in docs/maintainer/port-ledger.md, alongside the perplexity and frontend changes. Source: <a href="https://github.com/sergiuszm/ninfer-4090/commit/7f47a62282b8e9d3c3b03bd6750d0bfe37e9bb66" target="_blank" rel="noopener noreferrer" class="">https://github.com/sergiuszm/ninfer-4090/commit/7f47a62282b8e9d3c3b03bd6750d0bfe37e9bb66</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-ninfer4090-ninfer-perplexity-kv-dtypes#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/sergiuszm/ninfer-4090/commit/f3f4579ccd45139329fc40a8d7362d817f05d059" target="_blank" rel="noopener noreferrer" class="">https://github.com/sergiuszm/ninfer-4090/commit/f3f4579ccd45139329fc40a8d7362d817f05d059</a></li>
+<li class=""><a href="https://github.com/sergiuszm/ninfer-4090/commit/0d9fce61cdb9523d31d3822267ec5b417f5f84ce" target="_blank" rel="noopener noreferrer" class="">https://github.com/sergiuszm/ninfer-4090/commit/0d9fce61cdb9523d31d3822267ec5b417f5f84ce</a></li>
+<li class=""><a href="https://github.com/sergiuszm/ninfer-4090/commit/7f47a62282b8e9d3c3b03bd6750d0bfe37e9bb66" target="_blank" rel="noopener noreferrer" class="">https://github.com/sergiuszm/ninfer-4090/commit/7f47a62282b8e9d3c3b03bd6750d0bfe37e9bb66</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Ninfer4090</category>
+        </item>
+        <item>
+            <title><![CDATA[Omarchy Core grows: Alcantara and Skyum join, Greptile becomes Distinguished Corporate Patron]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-omarchy-core-grows</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-omarchy-core-grows</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Omarchy announced major growth on its people side this month. Marcelo Alcantara and Birk Skyum, credited as two of the people doing the most to take Omarchy beyond x86, joined Omarchy Core on November 5. The Omacom Foundation also added Greptile as a Distinguished Corporate Patron (October 15) and hired HANCORE as Head of Design and Community (October 27).]]></description>
+            <content:encoded><![CDATA[<p>Omarchy announced major growth on its people side this month. Marcelo Alcantara and Birk Skyum, credited as two of the people doing the most to take Omarchy beyond x86, joined Omarchy Core on November 5. The Omacom Foundation also added Greptile as a Distinguished Corporate Patron (October 15) and hired HANCORE as Head of Design and Community (October 27).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-omarchy-core-grows#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">On November 5, 2026, Omarchy announced that Marcelo Alcantara and Birk Skyum are joining Omarchy Core. Alcantara coordinated the Omarchy M effort, a sixteen-person team that shipped the native macOS installer in Omarchy 4.5, letting Omarchy run alongside macOS on Apple Silicon Macs; Skyum's work on Omarchy Dragon is also highlighted in the post. Source: <a href="https://omarchy.org/news/2026/11/marcelo-alcantara-and-birk-skyum-join-omarchy-core/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/11/marcelo-alcantara-and-birk-skyum-join-omarchy-core/</a></li>
+<li class="">On October 15, 2026, the Omacom Foundation announced Greptile as a Distinguished Corporate Patron, contributing $150,000 in tokens for its PR review service so every pull request coming into Omarchy can be reviewed. The post notes Greptile has already reviewed almost 1,500 pull requests, and that across the 60 most recently merged PRs it reviewed, it flagged 39 issues it rated as serious, including a Turkish-locale lowercasing bug in laptop model matching. Source: <a href="https://omarchy.org/news/2026/10/greptile-joins-as-a-distinguished-corporate-patron/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/10/greptile-joins-as-a-distinguished-corporate-patron/</a></li>
+<li class="">On October 27, 2026, the Omacom Foundation announced it is hiring HANCORE as Head of Design and Community, making him its fourth staff member alongside Krzysztof on Kernel, outfoxxed on Shell, and Emir on Infrastructure. He moves from his Omarchy AIR residency seat, where he started the plugin marketplace that grew into the official plugin catalogue with six thousand plugins, and whose themes (Solitude and Last Horizon) ship with Omarchy. Source: <a href="https://omarchy.org/news/2026/10/omacom-foundation-hires-hancore/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/10/omacom-foundation-hires-hancore/</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-omarchy-core-grows#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://omarchy.org/news/2026/11/marcelo-alcantara-and-birk-skyum-join-omarchy-core/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/11/marcelo-alcantara-and-birk-skyum-join-omarchy-core/</a></li>
+<li class=""><a href="https://omarchy.org/news/2026/10/greptile-joins-as-a-distinguished-corporate-patron/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/10/greptile-joins-as-a-distinguished-corporate-patron/</a></li>
+<li class=""><a href="https://omarchy.org/news/2026/10/omacom-foundation-hires-hancore/" target="_blank" rel="noopener noreferrer" class="">https://omarchy.org/news/2026/10/omacom-foundation-hires-hancore/</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Omarchy</category>
+        </item>
+        <item>
+            <title><![CDATA[Gadgetbridge 2026.11.1 stable lands with widget and Garmin fixes]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable</guid>
+            <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Gadgetbridge shipped stable release 2026.11.1 on 2026-11-07, a point release focused on dashboard widgets, sleep/HRV chart polish, and several device and platform fixes. The same week, version 2026.11.0 (build 256) appeared as a suggested update on F-Droid, where its release notes highlight 25 new plus 21 experimental devices and a refreshed design.]]></description>
+            <content:encoded><![CDATA[<p>Gadgetbridge shipped stable release 2026.11.1 on 2026-11-07, a point release focused on dashboard widgets, sleep/HRV chart polish, and several device and platform fixes. The same week, version 2026.11.0 (build 256) appeared as a suggested update on F-Droid, where its release notes highlight 25 new plus 21 experimental devices and a refreshed design.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">2026.11.1 stable was released by joserebelo on 2026-11-07. The changelog covers dashboard widget fixes and improvements (manage widgets setting, tile reshuffling, large font support, theme colors for sleep/HRV charts), Endurain SSO login callback fix, a weather-processing crash fix on Android &lt; 13, a Garmin web request URL-encoding regression fix, Health Connect skin-temperature delta correction, and improved Zepp OS BTBR packet handling. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">On 2026-11-06 the F-Droid repository listed Gadgetbridge 2026.11.0 (build 256) as a suggested update, with release highlights including support for 25 new plus 21 experimental devices, a refreshed design for dashboard, charts, and alarms, device cards, a workouts tab, Garmin import from the official app, and multiple fixes for charts, Health Connect, Huami, Xiaomi, and Zepp OS. (<a href="https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge/" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-2026-11-1-stable#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1</a></li>
+<li class=""><a href="https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge/" target="_blank" rel="noopener noreferrer" class="">https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge/</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Gadgetbridge</category>
+        </item>
         <item>
             <title><![CDATA[Egui 0.37.0 lands colored emoji support]]></title>
             <link>https://seriousjul.github.io/news/2026-10-18-egui-egui-0370-emoji-release</link>
