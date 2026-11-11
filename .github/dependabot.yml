@@ -20,6 +20,26 @@ updates:
     commit-message:
       prefix: "deps"
       include: "scope"
+    # Version updates cover direct dependencies only by default. That left the
+    # transitive dependencies pinned in package.json "overrides" to move solely
+    # via security updates, which bump to the minimum version that closes the
+    # advisory and go stale when a broader one lands. Keep the pinned
+    # transitive dependencies in the regular weekly update cycle instead. When
+    # you add or drop a pin in "overrides", add or drop its name here.
+    allow:
+      - dependency-type: "direct"
+      - dependency-name: "body-parser"
+      - dependency-name: "deepmerge"
+      - dependency-name: "fast-uri"
+      - dependency-name: "follow-redirects"
+      - dependency-name: "joi"
+      - dependency-name: "launch-editor"
+      - dependency-name: "postcss-selector-parser"
+      - dependency-name: "qs"
+      - dependency-name: "serialize-javascript"
+      - dependency-name: "tinypool"
+      - dependency-name: "uuid"
+      - dependency-name: "webpack-dev-middleware"
     groups:
       docusaurus:
         patterns:

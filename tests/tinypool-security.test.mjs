@@ -62,9 +62,11 @@
  *
  * tinypool is transitive here, reached through `@docusaurus/core`, which
  * declares `^1.0.2`. That range does not admit 2.1.2, so the pin is a
- * cross-major npm override in package.json and the lockfile check below
- * treats an unsatisfied dependent range as expected, provided the override
- * exists and covers the pin. A future @docusaurus/core upgrade may drop
+ * cross-major npm override in package.json, written as a caret floor so
+ * Dependabot can move the lockfile to newer 2.x releases while a fresh
+ * install stays at or above the first patched one. The lockfile check
+ * below treats an unsatisfied dependent range as expected, provided the
+ * override exists and covers the pin. A future @docusaurus/core upgrade may drop
  * tinypool from the tree, so when the package is absent every suite
  * reports as skipped rather than failing with ERR_MODULE_NOT_FOUND and
  * breaking every pull request. Skipped, not passed: a run with nothing
@@ -201,9 +203,16 @@ const TASK = {
   note: 'this body must never reach the attacker worker',
 };
 
-/** The three numeric parts of a version string. */
+/**
+ * The three numeric parts of a version string, or of the floor of a
+ * `^x.y.z`, `>=x.y.z`, or exact `x.y.z` range.
+ *
+ * The override in package.json is a range, and every version a floor
+ * range admits sits at or above the floor, so comparing floors is the
+ * complete check that a fresh install cannot resurrect a vulnerable copy.
+ */
 function semverParts(text) {
-  const match = /^(\d+)\.(\d+)\.(\d+)/.exec(text);
+  const match = /^(?:\^|>=)?(\d+)\.(\d+)\.(\d+)/.exec(text);
   assert.ok(match, `unrecognised tinypool version: ${text}`);
   return match.slice(1).map(Number);
 }
@@ -343,7 +352,7 @@ suite(
       );
       assert.ok(
         isAtOrAbove(semverParts(override), semverParts(MINIMUM_PIN)),
-        `the tinypool override pins ${override}, which is below ` +
+        `the tinypool override allows ${override}, whose floor sits below ` +
           `${MINIMUM_PIN}, so a fresh install would resurrect a vulnerable ` +
           `copy`
       );

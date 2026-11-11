@@ -34,10 +34,13 @@
  * every copy out of it. The pin is therefore a cross-major npm
  * override in package.json:
  *
- *     "overrides": { "postcss-selector-parser": "7.1.6" }
+ *     "overrides": { "postcss-selector-parser": "^7.1.6" }
  *
  * and the lockfile check below treats an unsatisfied dependent range as
- * expected, provided the override exists and covers the pin.
+ * expected, provided the override exists and covers the pin. The override
+ * is a caret floor, not an exact pin: it holds a fresh install at or above
+ * the first patched release while leaving Dependabot room to move the
+ * lockfile to newer 7.x releases.
  *
  * The one behaviour change between the 6.1.4 the cssnano plugins were
  * built against and 7.1.6 that could matter to them is the 7.0.0
@@ -133,9 +136,16 @@ const suiteOptions = skipReason ? { skip: skipReason } : {};
 const suite = (title, body) => describe(title, suiteOptions, body);
 const SUITE_TITLE_SUFFIX = version ?? 'not installed';
 
-/** The three numeric parts of a version string. */
+/**
+ * The three numeric parts of a version string, or of the floor of a
+ * `^x.y.z`, `>=x.y.z`, or exact `x.y.z` range.
+ *
+ * The override in package.json is a range, and every version a floor
+ * range admits sits at or above the floor, so comparing floors is the
+ * complete check that a fresh install cannot resurrect a vulnerable copy.
+ */
 function semverParts(text) {
-  const match = /^(\d+)\.(\d+)\.(\d+)/.exec(text);
+  const match = /^(?:\^|>=)?(\d+)\.(\d+)\.(\d+)/.exec(text);
   assert.ok(match, `unrecognised postcss-selector-parser version: ${text}`);
   return match.slice(1).map(Number);
 }
@@ -297,9 +307,9 @@ suite(
       );
       assert.ok(
         isAtOrAbove(semverParts(override), semverParts(MINIMUM_VERSION)),
-        `the postcss-selector-parser override pins ${override}, which is ` +
-          `below ${MINIMUM_VERSION}, so a fresh install would resurrect a ` +
-          `vulnerable copy`
+        `the postcss-selector-parser override allows ${override}, whose ` +
+          `floor sits below ${MINIMUM_VERSION}, so a fresh install would ` +
+          `resurrect a vulnerable copy`
       );
     });
   }

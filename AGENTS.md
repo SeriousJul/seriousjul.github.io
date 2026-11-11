@@ -23,6 +23,8 @@ Node >= 20 required. Uses npm (not yarn despite README mentioning yarn).
 This project never patches third-party source. A local patch - changed third-party source installed in place of the registry copy - is forbidden by [ADR-0001](docs/adr/0001-no-local-patches-to-third-party-dependencies.md). The vocabulary is in [GLOSSARY.md](GLOSSARY.md).
 
 - The sanctioned way to answer an advisory is a **registry version pin**: a published registry version selected through `overrides` in `package.json`.
+- An override pin is a caret floor on the first fixed release (for example `^1.20.9`), never an exact version. An exact pin leaves that dependency's lockfile entry where it sits, and Dependabot cannot move it.
+- The `allow` list in `.github/dependabot.yml` names every transitive dependency pinned in `overrides`, so version updates keep those lockfile entries current. When you add or drop an `overrides` pin, add or drop its name in the allow list.
 - Where an advisory has no upstream fix, the response is a reachability analysis, a registry pin where one exists, and **dependency replacement** when the dependency is unhealthy.
 - No `file:`, `link:`, path, git, `github:` or tarball dependency spec is allowed, and no tracked third-party source path is allowed. `tests/dependency-policy.test.mjs` fails the build if either appears. Reopening a banned shape requires a new ADR.
 - CI sets `NO_UPDATE_NOTIFIER=1` so the `update-notifier` path (the only runtime consumer of `http-cache-semantics`) never runs there. Set the same variable in your local environment for local development.
