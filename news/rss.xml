@@ -148,6 +148,32 @@
             <category>egui</category>
         </item>
         <item>
+            <title><![CDATA[Gadgetbridge 2026.11.0 and 2026.11.1 land new device support and fixes]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-november-stable-releases</link>
+            <guid>https://seriousjul.github.io/news/2026-11-11-gadgetbridge-november-stable-releases</guid>
+            <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Gadgetbridge released two stable versions within the past month. 2026.11.0 (released 2026-11-03) adds initial support for a batch of new devices, while follow-up 2026.11.1 (released 2026-11-07) focuses on dashboard and chart improvements plus regression fixes. Both were published by joserebelo on the project's Codeberg release page.]]></description>
+            <content:encoded><![CDATA[<p>Gadgetbridge released two stable versions within the past month. 2026.11.0 (released 2026-11-03) adds initial support for a batch of new devices, while follow-up 2026.11.1 (released 2026-11-07) focuses on dashboard and chart improvements plus regression fixes. Both were published by joserebelo on the project's Codeberg release page.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-november-stable-releases#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">2026.11.0 stable released on 2026-11-03, adding initial support for Anker Soundcore Motion+ (R50i NC, V20i), Bettdow FB051 (MoYoung / Da Fit), Beurer BM59, BRAZ/7HARRY (FitPro), Casio GG-B100, and more, as listed in the release changelog. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.0" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+<li class="">2026.11.1 stable released on 2026-11-07 as a maintenance release fixing and improving dashboard, charts, and vendor integrations. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-november-stable-releases#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">2026.11.1 fixes a crash on weather processing on Android below 13. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+<li class="">2026.11.1 fixes a regression in Garmin web request URL encoding and improves Zepp OS BTBR packet handling. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+<li class="">2026.11.1 improves dashboard and charts: centered axis labels, fixed widget management and tile reshuffling on long press, better large font support, awake sleep shown in the day widget, and theme colors applied to sleep chart widgets; it also fixes the Endurain SSO login callback and Health Connect skin temperature deltas. (<a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">source</a>)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-11-gadgetbridge-november-stable-releases#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.0" target="_blank" rel="noopener noreferrer" class="">https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.0</a></li>
+<li class=""><a href="https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1" target="_blank" rel="noopener noreferrer" class="">https://codeberg.org/Freeyourgadget/Gadgetbridge/releases/tag/2026.11.1</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Gadgetbridge</category>
+        </item>
+        <item>
             <title><![CDATA[LlamaCPP 0.9.0 lands OCP FP8 and a local speech stack]]></title>
             <link>https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech</link>
             <guid>https://seriousjul.github.io/news/2026-11-11-llamacpp-090-fp8-speech</guid>
