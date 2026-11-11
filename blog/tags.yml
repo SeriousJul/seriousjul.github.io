@@ -22,3 +22,23 @@ strata:
   label: Strata
   permalink: /strata
   description: Posts about the Strata local LLM engine
+
+actual-budget:
+  label: Actual Budget
+  permalink: /actual-budget
+  description: Posts about the Actual Budget personal finance app
+
+coder:
+  label: Coder
+  permalink: /coder
+  description: Posts about the Coder self-hosted development environment
+
+gadgetbridge:
+  label: Gadgetbridge
+  permalink: /gadgetbridge
+  description: Posts about the Gadgetbridge smartwatch companion app
+
+ninfer4090:
+  label: Ninfer4090
+  permalink: /ninfer4090
+  description: Posts about the Ninfer4090 local LLM inference project
