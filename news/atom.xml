@@ -35,6 +35,37 @@
         <category label="llamacpp" term="llamacpp"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[N8N 2.48.6 stable release with AI Agent fixes]]></title>
+        <id>https://seriousjul.github.io/news/2026-11-20-n8n-2-48-6-stable-release</id>
+        <link href="https://seriousjul.github.io/news/2026-11-20-n8n-2-48-6-stable-release"/>
+        <updated>2026-11-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[n8n published stable release 2.48.6 on 2026-11-19, the newest of three 2.48-series patch releases shipped in this window. The series carried meaningful fixes in 2.48.5, including improvements to the AI Agent Node and core install behavior.]]></summary>
+        <content type="html"><![CDATA[<p>n8n published stable release 2.48.6 on 2026-11-19, the newest of three 2.48-series patch releases shipped in this window. The series carried meaningful fixes in 2.48.5, including improvements to the AI Agent Node and core install behavior.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-20-n8n-2-48-6-stable-release#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">n8n 2.48.6 (2026-11-19): new stable patch release of the 2.48 series; the release notes contain no details beyond the version heading. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.6" target="_blank" rel="noopener noreferrer" class="">Source</a></li>
+<li class="">n8n 2.48.4 (2026-11-13): stable patch release in the 2.48 series; no notable release-note details were visible for this build. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.4" target="_blank" rel="noopener noreferrer" class="">Source</a></li>
+<li class="">n8n 2.48.5 (2026-11-18): stable release focused on bug fixes. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.5" target="_blank" rel="noopener noreferrer" class="">Source</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-20-n8n-2-48-6-stable-release#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">n8n 2.48.5 (2026-11-18): AI Agent Node now keeps tool-call history separate for each input item, and streaming output no longer inserts extra newlines between text chunks. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.5" target="_blank" rel="noopener noreferrer" class="">Source</a></li>
+<li class="">n8n 2.48.5 (2026-11-18): core fixes so fresh installs get a proper instance ID and dollar-property reads in sandboxed expressions are handed to the expression engine. <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.5" target="_blank" rel="noopener noreferrer" class="">Source</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-20-n8n-2-48-6-stable-release#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.6" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.6</a></li>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.5" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.5</a></li>
+<li class=""><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.4" target="_blank" rel="noopener noreferrer" class="">https://github.com/n8n-io/n8n/releases/tag/n8n%402.48.4</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="Project" term="Project"/>
+        <category label="n8n" term="n8n"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Actual Budget 26.11.0 ships automatic syncing and breaking SimpleFin change]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release"/>
