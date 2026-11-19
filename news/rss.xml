@@ -112,6 +112,37 @@
             <category>omniroute</category>
         </item>
         <item>
+            <title><![CDATA[Strata 0.2.16 ships its own inference engine]]></title>
+            <link>https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine</link>
+            <guid>https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine</guid>
+            <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Strata 0.2.16 landed on 18 November 2026, moving every engine (NVIDIA, AMD, Intel Arc, Apple Silicon, DGX Spark) to Strata's own engine code with no ggml or llama.cpp matrix kernels. The release also reorganizes the repository into engine/, app/, terminal/, docs/ and tools/, and fixes a silent correctness bug on Mac M1-M4 from 0.2.15 plus several Windows and Linux crashes. LinuxCompatible covered the release the next day.]]></description>
+            <content:encoded><![CDATA[<p>Strata 0.2.16 landed on 18 November 2026, moving every engine (NVIDIA, AMD, Intel Arc, Apple Silicon, DGX Spark) to Strata's own engine code with no ggml or llama.cpp matrix kernels. The release also reorganizes the repository into engine/, app/, terminal/, docs/ and tools/, and fixes a silent correctness bug on Mac M1-M4 from 0.2.15 plus several Windows and Linux crashes. LinuxCompatible covered the release the next day.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">Strata v0.2.16 was released on 18 November 2026 (app and Terminal at 0.2.16, engines and Control at 0.1.62, update feed sequence 128). The repo was reorganized into engine/, app/, terminal/, docs/ and tools/, and existing models, chats and settings carry over on update: <a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.16" target="_blank" rel="noopener noreferrer" class="">https://github.com/Niko1221/Strata/releases/tag/v0.2.16</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="features">Features<a href="https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features" translate="no">​</a></h2>
+<ul>
+<li class="">All engines now run on Strata's own engine code, dropping ggml and llama.cpp matrix kernels across NVIDIA, AMD, Intel Arc, Apple Silicon and DGX Spark. The developer claims identical model output to the old engine across its test hardware: <a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.16" target="_blank" rel="noopener noreferrer" class="">https://github.com/Niko1221/Strata/releases/tag/v0.2.16</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes-and-other">Fixes and other<a href="https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine#fixes-and-other" class="hash-link" aria-label="Direct link to Fixes and other" title="Direct link to Fixes and other" translate="no">​</a></h2>
+<ul>
+<li class="">0.2.16 fixes the wrong-results bug on Mac M1-M4 with UD-Q4_K_XL introduced in 0.2.15, plus several Windows and Linux crash issues: <a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.16" target="_blank" rel="noopener noreferrer" class="">https://github.com/Niko1221/Strata/releases/tag/v0.2.16</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">LinuxCompatible reported on the release on 19 November 2026, headlining that Strata now runs its own engine, drops llama.cpp, and claims identical output across nine tested GPUs: <a href="https://www.linuxcompatible.org/story/strata-0216-runs-its-own-engine-drops-llamacpp-claims-identical-output" target="_blank" rel="noopener noreferrer" class="">https://www.linuxcompatible.org/story/strata-0216-runs-its-own-engine-drops-llamacpp-claims-identical-output</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-20-strata-0216-own-engine#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.16" target="_blank" rel="noopener noreferrer" class="">https://github.com/Niko1221/Strata/releases/tag/v0.2.16</a></li>
+<li class=""><a href="https://www.linuxcompatible.org/story/strata-0216-runs-its-own-engine-drops-llamacpp-claims-identical-output" target="_blank" rel="noopener noreferrer" class="">https://www.linuxcompatible.org/story/strata-0216-runs-its-own-engine-drops-llamacpp-claims-identical-output</a></li>
+</ul>]]></content:encoded>
+            <category>Project</category>
+            <category>Strata</category>
+        </item>
+        <item>
             <title><![CDATA[Actual Budget 26.11.0 ships automatic syncing and breaking SimpleFin change]]></title>
             <link>https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release</link>
             <guid>https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release</guid>
