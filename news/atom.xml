@@ -66,6 +66,33 @@
         <category label="n8n" term="n8n"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[OmniRoute v3.8.54 lands ChatGPT sign-in and budget controls]]></title>
+        <id>https://seriousjul.github.io/news/2026-11-20-omniroute-3-8-54-chatgpt-provider</id>
+        <link href="https://seriousjul.github.io/news/2026-11-20-omniroute-3-8-54-chatgpt-provider"/>
+        <updated>2026-11-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[OmniRoute shipped v3.8.54 on 2026-11-17, its biggest cycle yet with an official "Sign in with ChatGPT" provider, several new providers, endpoint-specific combo routes, per-key rolling 5-hour USD budgets, and an opt-in PII token vault. Days later the project also gained third-party attention with a Level Up feature article pitching it as the ultimate AI gateway for 2026.]]></summary>
+        <content type="html"><![CDATA[<p>OmniRoute shipped v3.8.54 on 2026-11-17, its biggest cycle yet with an official "Sign in with ChatGPT" provider, several new providers, endpoint-specific combo routes, per-key rolling 5-hour USD budgets, and an opt-in PII token vault. Days later the project also gained third-party attention with a Level Up feature article pitching it as the ultimate AI gateway for 2026.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="releases">Releases<a href="https://seriousjul.github.io/news/2026-11-20-omniroute-3-8-54-chatgpt-provider#releases" class="hash-link" aria-label="Direct link to Releases" title="Direct link to Releases" translate="no">​</a></h2>
+<ul>
+<li class="">v3.8.54 released 2026-11-17 (920 commits, 121 contributors in the cycle): official "Sign in with ChatGPT" provider (PKCE + live model discovery), MiniMax Code, RenderHour and other new providers, endpoint-specific combo routes with new jev and expiry-first strategies, per-key rolling 5-hour USD budgets, and an opt-in PII token vault. Docker images are now also published to the Cheaper Inference org (cheaperinference/omniroute) and GHCR. Source: <a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.54" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.54</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="community">Community<a href="https://seriousjul.github.io/news/2026-11-20-omniroute-3-8-54-chatgpt-provider#community" class="hash-link" aria-label="Direct link to Community" title="Direct link to Community" translate="no">​</a></h2>
+<ul>
+<li class="">Hirusha Fernando published "Never Ending AI Coding With OmniRoute" on Level Up (2026-11-18), describing the single OpenAI-compatible endpoint, four-tier subscription-to-free fallback, and npm/Docker setup for Claude Code, Codex, Cursor, Cline and Copilot. Source: <a href="https://levelup.gitconnected.com/never-ending-ai-coding-with-omniroute-db418b681406" target="_blank" rel="noopener noreferrer" class="">https://levelup.gitconnected.com/never-ending-ai-coding-with-omniroute-db418b681406</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sources">Sources<a href="https://seriousjul.github.io/news/2026-11-20-omniroute-3-8-54-chatgpt-provider#sources" class="hash-link" aria-label="Direct link to Sources" title="Direct link to Sources" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.54" target="_blank" rel="noopener noreferrer" class="">https://github.com/cheaper-inference/OmniRoute/releases/tag/v3.8.54</a></li>
+<li class=""><a href="https://levelup.gitconnected.com/never-ending-ai-coding-with-omniroute-db418b681406" target="_blank" rel="noopener noreferrer" class="">https://levelup.gitconnected.com/never-ending-ai-coding-with-omniroute-db418b681406</a></li>
+</ul>]]></content>
+        <author>
+            <name>Julien Antony</name>
+            <uri>https://seriousjul.github.io</uri>
+        </author>
+        <category label="Project" term="Project"/>
+        <category label="omniroute" term="omniroute"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Actual Budget 26.11.0 ships automatic syncing and breaking SimpleFin change]]></title>
         <id>https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release</id>
         <link href="https://seriousjul.github.io/news/2026-11-11-actual-budget-actual-26-11-0-release"/>
