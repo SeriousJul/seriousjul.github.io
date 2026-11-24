@@ -1,0 +1,24 @@
+---
+title: "n8n 2.49.0 and 2.50.0 ship, CVE-2026-119408 gets a deep dive"
+authors: [seriousjul]
+tags: [project, n8n]
+slug: 2026-11-24-n8n-2-49-0-2-50-0-stable-releases
+---
+
+n8n shipped two stable releases this window: 2.49.0 (Nov 17), a broad update centered on AI agents with webhook channels, approval support, agent management, and tool guardrails, and 2.50.0 (Nov 24), which fixed AI Agent chat-memory handling, n8n Assistant behavior, and Public API import/export. Also, TryHackMe detailed CVE-2026-119408, a high-severity code-execution flaw patched in 2.42.6, and Activepieces published a detailed analysis of Nod, n8n's local personal agent.
+
+## Releases
+- **2.49.0** (Nov 17, 2026): broad update focused on AI agents, adding webhook channels, approval support, agent management, skills editing, and tool guardrails; also expands API and OAuth capabilities and fixes numerous reliability, workflow, and editor issues ([Releasebot](https://releasebot.io/updates/n8n)).
+- **2.50.0** (Nov 24, 2026): stable release with bug fixes including AI Agent chat-memory handling (drops turns with empty content), n8n Assistant improvements, Public API behavior for workflow package import/export, and fixes across AWS Bedrock, Baserow, and HTTP Request nodes ([n8n CHANGELOG](https://raw.githubusercontent.com/n8n-io/n8n/master/CHANGELOG.md)).
+
+## Fixes and other
+- TryHackMe (Nov 23, 2026) detailed **CVE-2026-119408** (CVSS 8.7, High): a user with workflow permissions can run JavaScript in the main application process via the deprecated Function, Function Item, and LangChain Code nodes, outside task-runner isolation, which can expose the instance encryption key. The vendor patch shipped in 2.42.6, and the write-up links a hands-on training room ([TryHackMe](https://tryhackme.com/resources/blog/how-deprecated-n8n-nodes-put-workflow-credentials-at-risk)).
+
+## Community
+- Activepieces (Nov 21, 2026) published a detailed analysis of **Nod**, n8n's local personal agent released as a research preview that can connect to n8n to build, test, and run workflows. As of 2026-11-11, n8n had not published a launch date or source code, and no native third-party integration exists yet ([Activepieces](https://www.activepieces.com/blog/nod-by-n8n-what-it-is-and-whats-known-2026)).
+
+## Sources
+- https://releasebot.io/updates/n8n
+- https://raw.githubusercontent.com/n8n-io/n8n/master/CHANGELOG.md
+- https://tryhackme.com/resources/blog/how-deprecated-n8n-nodes-put-workflow-credentials-at-risk
+- https://www.activepieces.com/blog/nod-by-n8n-what-it-is-and-whats-known-2026
